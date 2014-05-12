@@ -8,9 +8,11 @@ morea_type: home
 
 ## Goals
 
-One goal of ICS 314: Software Engineering is to advance your ability to design
+The primary goal of ICS 314: Software Engineering is to advance your ability to design
 and implement high quality software systems using open source software
-development principles. We accomplish this by taking a technological approach
+development principles. 
+
+We accomplish this by taking a technological approach
 to the presentation of traditional software engineering concepts like
 specification, modeling, analysis, and design. By the end of the semester, you
 will acquire significant new skills with useful tools including: the
@@ -25,11 +27,13 @@ the [git](http://git-scm.com/) configuration management system and
 [FindBugs](http://findbugs.sourceforge.net/) automated quality assurance
 tools.
 
-Another goal is to help you establish a "professional persona". This includes:
-(a) a professional, permanent email address; (b) a professional portfolio; (c)
-a technical blog written by you with well-written articles; (d) participation
-in professional networking sites such as LinkedIn and TechHui; and (d)
-awareness of ethical issues as they apply to software engineering.
+A second goal is to help you establish a "professional online
+persona". This includes: (a) a professional portfolio web site; (b) a
+set of publicly available software projects in which you have
+participated; (c) a technical blog written by you with well-written
+articles; and (d) participation in professional networking sites such
+as LinkedIn and TechHui.
+
 
 A third goal is for you to develop effective strategies for writing, to use
 and value writing as a tools for learning, and to learn to write in an
