@@ -6,7 +6,7 @@ morea_type: assessment
 morea_sort_order: 1
 ---
 
-<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css"></link>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
@@ -23,6 +23,7 @@ morea_sort_order: 1
     appropriate operating system installed, and had successfully installed the appropriate version of Java. 
     </p>
   </div>
+</div>
 
 <script>
 Morris.Bar({

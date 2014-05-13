@@ -40,9 +40,9 @@ Be sure to download and install the "JDK" package, which includes both the JRE a
 
 On Windows, you must change the default installation directory to a file path that does not contain spaces. The default on Windows is c:\Program Files\Java, which is bogus. Change it to something like c:\Java. You will run into problems if you install the JDK inside c:\Program Files\.
 
-Add <java>/bin to your PATH variable, where <java> is replaced by the location where you installed it.
+Add {java}/bin to your PATH variable, where {java} is replaced by the location where you installed it.
 
-Also download the Java SE 7 Documentation. Unzip the documentation package into <java>.
+Also download the Java SE 7 Documentation. Unzip the documentation package into {java}.
 If you have installed Java correctly, then you should be able to type “java
 -version” and “jar -help” at the command line and get reasonable responses. If
 you have installed the documentation correctly, then you should be able to
