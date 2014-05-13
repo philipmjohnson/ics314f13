@@ -19,7 +19,8 @@
 
   <!-- Load Bootstrap JavaScript components -->
   <script src="http://code.jquery.com/jquery.min.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 <!-- Responsive navbar -->
@@ -40,6 +41,8 @@
         <li><a href="/ics314f13/readings/">Readings</a></li>
         <li><a href="/ics314f13/experiences/">Experiences</a></li>
         <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
         
       </ul>
     </div>
@@ -56,44 +59,41 @@
     <h2><small>Module:</small> <a href="/ics314f13/modules/introduction/index.html">Introduction</a></h2>
 
     
-    <p>No assessments for this module.</p>
-    
-
-    
-  </div>
-</div>
-
-<div class="section-background-2">
-  <div class="container">
-    <h2><small>Module:</small> <a href="/ics314f13/modules/foo/index.html">Learn to Foo</a></h2>
-
-    
 
     
       
-      <h3>Assessment 1: Assessment of Foo construction skill</h3>
+      <h3>Assessment 1: Assessment of environment configuration</h3>
       <p>
         
       </p>
-      <p>Assessed ability to construct foo instances.</p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
 
-<p><link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script></p>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 
-<div class="well">
-  <div id="assessment" style="height: 250px;"></div>
-</div>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-8">
+    <div class="well">
+      <div id="assessment-environment-configuration" style="height: 150px;"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <p>
+    This assessment verified that students obtained laptops with the appropriate hardware, had the
+    appropriate operating system installed, and had successfully installed the appropriate version of Java. 
+    </p>
+  </div>
 
 <script>
 Morris.Bar({
-  element: 'assessment',
+  element: 'assessment-environment-configuration',
   hideHover: false,
   data: [
-        { y: 'Very satisfactory (%)', num: 25 },
-        { y: 'Satisfactory (%)', num: 40 },
-        { y: 'Unsatisfactory (%)', num: 30 },
-        { y: 'Absent (%)', num: 5 },
+        { y: 'Satisfactory (%)', num: 80 },
+        { y: 'Unsatisfactory (%)', num: 10 },
+        { y: 'Absent (%)', num: 10 },
         ],
   xkey: 'y',
   ykeys: ['num'],
@@ -101,23 +101,50 @@ Morris.Bar({
   labels: ['Students']
 });
 </script>
-
-<p></div>
-</div></p>
-
-<div class="section-background-1">
-  <div class="container">
-    <h2><small>Module:</small> <a href="/ics314f13/modules/bar/index.html">Learn to Bar</a></h2>
-
-    
+</div>
 
     
       
-      <h3>Assessment 1: Assessment of the Bar</h3>
+      <h3>Assessment 2: Assessment of discussion posting</h3>
       <p>
         
       </p>
-      <p>This is the second assessment.</p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-8">
+    <div class="well">
+      <div id="assessment-discussion-posting" style="height: 150px;"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <p>
+    This assessment verified that students subscribed to the class newsgroup and 
+    posted an introductory message about themselves. 
+    </p>
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-discussion-posting',
+  hideHover: false,
+  data: [
+        { y: 'Satisfactory (%)', num: 100 },
+        { y: 'Unsatisfactory (%)', num: 0 },
+        { y: 'Absent (%)', num: 0 },
+        ],
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+</div>
 
     
   </div>
@@ -125,25 +152,7 @@ Morris.Bar({
 
 <div class="section-background-2">
   <div class="container">
-    <h2><small>Module:</small> <a href="/ics314f13/modules/baz/index.html">Learn to Baz</a></h2>
-
-    
-
-    
-      
-      <h3>Assessment 1: Assessment of the Baz</h3>
-      <p>
-        
-      </p>
-      <p>This is the third assessment.</p>
-
-    
-  </div>
-</div>
-
-<div class="section-background-1">
-  <div class="container">
-    <h2><small>Module:</small> <a href="/ics314f13/modules/qux/index.html">Learn to Qux</a></h2>
+    <h2><small>Module:</small> <a href="/ics314f13/modules/professional-persona/index.html">Professional Persona</a></h2>
 
     
     <p>No assessments for this module.</p>
@@ -152,6 +161,7 @@ Morris.Bar({
     
   </div>
 </div>
+
 
 
 
@@ -160,12 +170,12 @@ Morris.Bar({
 <footer>
   <div class="container page-footer">
     
-      <p>Philip Johnson | Information and Computer Sciences | University of Hawaii <br>
-johnson@hawaii.edu<br></p>
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a style="color: white" href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-05-12 08:13:17 -1000</span></p>
+       Last update on: <span>2014-05-12 22:02:47 -1000</span></p>
   </div>
 </footer>
 </div>
