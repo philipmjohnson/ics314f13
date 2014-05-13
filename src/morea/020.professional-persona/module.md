@@ -1,6 +1,6 @@
 ---
 title: "Professional Persona"
-published: false
+morea_published: false
 morea_id: professional-persona
 morea_outcomes:
  - outcome-professional-persona
