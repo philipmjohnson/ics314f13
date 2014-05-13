@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-<p>&lt;/link&gt;
+
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script></p>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
   <div class="col-sm-8">
@@ -21,11 +22,10 @@
 <script>
 Morris.Bar({
   element: 'assessment-discussion-posting',
-  hideHover: false,
+  hideHover: 'auto',
   data: [
         { y: 'Satisfactory (%)', num: 100 },
         { y: 'Unsatisfactory (%)', num: 0 },
-        { y: 'Absent (%)', num: 0 },
         ],
   xkey: 'y',
   ykeys: ['num'],
