@@ -45,14 +45,14 @@ intensive](https://www.hawaii.edu/gened/focus/w.htm) course.
 
 ## Pedagogy
 
-ICS 314 is structured as a sequential series of [modules](menu-modules.html),
+ICS 314 is structured as a sequential series of [modules](modules),
 each taking approximately a week to complete. Each module has the following
 structure:
 
-  * One or more [learning outcomes](menu-outcomes.html), describing the major goals for the module.
-  * One or more [readings and other online resources](menu-readings.html), providing background material.
-  * One or more [experiential learning activities](menu-experiences.html), providing a structured set of challenges enabling you to acquire mastery of material.
-  * One or more [assessments](menu-assessments.html), measuring your success in achieving the learning outcomes.
+  * One or more [learning outcomes](outcomes), describing the major goals for the module.
+  * One or more [readings and other online resources](readings), providing background material.
+  * One or more [experiential learning activities](experiences), providing a structured set of challenges enabling you to acquire mastery of material.
+  * One or more [assessments](assessments), measuring your success in achieving the learning outcomes.
 
 ICS 314 also implements an educational technique called [athletic software
 engineering](http://philipmjohnson.org/2013/07/12/athletic-software-engineering-education/),

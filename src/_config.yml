@@ -1,5 +1,4 @@
 name: ICS 314, Fall 2013
-markdown: redcarpet
 highlighter: pygments
 safe: false
 baseurl: /ics314f13
