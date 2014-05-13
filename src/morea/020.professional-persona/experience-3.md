@@ -1,42 +1,49 @@
 ---
-title: "A03: Introduce yourself"
+title: "A06: Join TechHui"
 published: true
-morea_id: experience-introduce-yourself-2
+morea_id: experience-join-techhui
 morea_type: experience
-morea_summary: "Post a message to the class discussion list about yourself"
+morea_summary: "Learn how to join TechHui and participate in discussions."
 morea_sort_order: 3
 morea_labels:
 ---
 
-# A03: Introduce yourself
+# A06: Join TechHui
 
 ## Task
 
-For this assignment, join the [ICS 314 Google discussion group](https://groups.google.com/d/forum/ics314f13) and, once your request to
-join has been approved, post a short introductory paragraph about yourself.
-This provides info to your fellow students, and also verifies that you have
-joined the discussion group and can post to it. 
+This assignment helps you develop your networking skills and professional
+relationships. With the advent of social network technologies, it is easier
+than ever to create (or destroy) an online reputation. For this assignment,
+you will practice your "professional" social networking skills in the context
+of the TechHui social network. 
 
-Unfortunately, you cannot join
-the discussion group using your hawaii.edu account. You’ll need to sign up
-using a gmail account. If you need to create a gmail account specifically
-for this purpose, make sure to forward all of its mail to your hawaii.edu
-account so that you receive postings in a timely manner. 
+First, join [TechHui](http://www.techhui.com/),
+and include a "professionally appropriate" photograph of yourself. 
 
-It is your
-responsibility to receive information about this class via the newsgroup
-promptly. In general, this means you should configure the group settings to
-send each message posted to the group as an email to the gmail address you
-provided. Then use forwarding to get it to one (or more) email address(es)
-that you read regularly. 
+Second, join
+the [uh-ics-students](http://www.techhui.com/group/uhicsstudents) group.
 
-Assume it might take up to 12 hours for me to notice
-your request to join and to approve your membership in the group, so don't
-wait until the last minute to do this task.
+Third, post a comment to both the "Three bad things about being an ICS
+student" and "Three good things about being an ICS student". Remember that
+every post you make to TechHui becomes part of your "permanent record". The
+goal of this exercise is to help you think about how to provide both positive
+and negative feedback in a way that you won't regret later. 
 
-## Submission instructions:
+Note: it might be
+tempting to simply read previous entries and post a "me too" response. You
+will regret that later: it gives the impression that you are not capable of
+independent thought. Take the time to respond in a thoughtful, creative, and
+insightful manner.
 
-This assignment must be completed by the time and date indicated on the
-Schedule page.
+## Submission instructions
+
+By the date and time specified on the Schedule page, send johnson@hawaii.edu
+an email with a link to your home page on TechHui. Make sure your links begin
+with http: so they are clickable in my mailer. I will then check the uh-ics-students group for your comments.
+
+Note: the subject line must be **[ICS 314: A06]**. If the subject line is different, then I might not see the email and
+you might not get credit for this assignment.
+
 
 

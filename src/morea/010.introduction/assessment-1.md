@@ -6,7 +6,7 @@ morea_type: assessment
 morea_sort_order: 1
 ---
 
-<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css"></link>
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
@@ -28,11 +28,10 @@ morea_sort_order: 1
 <script>
 Morris.Bar({
   element: 'assessment-environment-configuration',
-  hideHover: false,
+  hideHover: 'auto',
   data: [
         { y: 'Satisfactory (%)', num: 80 },
-        { y: 'Unsatisfactory (%)', num: 10 },
-        { y: 'Absent (%)', num: 10 },
+        { y: 'Unsatisfactory (%)', num: 20 },
         ],
   xkey: 'y',
   ykeys: ['num'],

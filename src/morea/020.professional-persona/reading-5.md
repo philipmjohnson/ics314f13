@@ -1,9 +1,9 @@
 ---
-title: "The programmer dress code"
+title: "Computer science students: learn how to write!"
 published: true
-morea_id: reading-dress-code-1
-morea_url: http://www.codethinked.com/the-programmer-dress-code
-morea_summary: "I really want to know what it is about programming, or computers in general, that makes people want to grow a beard, have long hair, and dress like a slob."
+morea_id: reading-learn-to-write
+morea_url: http://www.xaprb.com/blog/2011/08/04/computer-science-students-learn-to-write/
+morea_summary: "The single most important skill I learned in university while getting a degree in Computer Science was how to write better. Everything important you do in your professional life is about communication."
 morea_type: reading
 morea_sort_order: 5
 ---

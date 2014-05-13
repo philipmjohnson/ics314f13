@@ -1,13 +1,13 @@
 ---
-title: "Introduction to ICS 314"
+title: "Building a professional portfolio in WordPress"
 published: true
-morea_id: reading-screencast-intro-1
-morea_url: https://www.youtube.com/watch?v=H_Oc1x-XdYo
-morea_summary: "Goals, the three prime directives, texts, prerequisites, what to do next"
+morea_id: reading-screencast-wordpress
+morea_url: https://www.youtube.com/watch?v=p_WyVPgxHuY
+morea_summary: "Guided tour of configuring a WordPress site for use as a professional portfolio"
 morea_type: reading
 morea_sort_order: 2
 morea_labels:
  - Screencast
- - 20 min
+ - 18 min
 ---
 

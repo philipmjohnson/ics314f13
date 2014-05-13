@@ -3,7 +3,7 @@ title: "Technical Writing"
 published: true
 morea_id: outcome-technical-writing
 morea_type: outcome
-morea_sort_order: 3
+morea_sort_order: 5
 ---
 
 You demonstrate the ability to write professional-quality technical reports or to have significantly 

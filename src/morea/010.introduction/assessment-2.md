@@ -5,7 +5,7 @@ morea_id: assessment-discussion-posting
 morea_type: assessment
 morea_sort_order: 2
 ---
-<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css"></link>
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
@@ -27,11 +27,10 @@ morea_sort_order: 2
 <script>
 Morris.Bar({
   element: 'assessment-discussion-posting',
-  hideHover: false,
+  hideHover: 'auto',
   data: [
         { y: 'Satisfactory (%)', num: 100 },
         { y: 'Unsatisfactory (%)', num: 0 },
-        { y: 'Absent (%)', num: 0 },
         ],
   xkey: 'y',
   ykeys: ['num'],

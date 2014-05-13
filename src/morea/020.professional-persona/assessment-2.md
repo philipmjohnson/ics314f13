@@ -1,7 +1,7 @@
 ---
-title: "Assessment of discussion posting"
+title: "Assessment of professional networks"
 published: true
-morea_id: assessment-discussion-posting-1
+morea_id: assessment-professional-networks
 morea_type: assessment
 morea_sort_order: 2
 ---
@@ -12,25 +12,24 @@ morea_sort_order: 2
 <div class="row">
   <div class="col-sm-8">
     <div class="well">
-      <div id="assessment-discussion-posting" style="height: 150px;"></div>
+      <div id="assessment-professional-networks" style="height: 150px;"></div>
     </div>
   </div>
 
   <div class="col-sm-4">
     <p>
-    This assessment verified that students subscribed to the class newsgroup and 
-    posted an introductory message about themselves. 
+    This assessment verified that students joined the TechHui and LinkedIn professional
+    networks and set up appropriate profiles. 
     </p>
   </div>
 
 <script>
 Morris.Bar({
-  element: 'assessment-discussion-posting',
-  hideHover: false,
+  element: 'assessment-professional-networks',
+  hideHover: 'auto',
   data: [
-        { y: 'Satisfactory (%)', num: 100 },
-        { y: 'Unsatisfactory (%)', num: 0 },
-        { y: 'Absent (%)', num: 0 },
+        { y: 'Satisfactory (%)', num: 90 },
+        { y: 'Unsatisfactory (%)', num: 10 },
         ],
   xkey: 'y',
   ykeys: ['num'],

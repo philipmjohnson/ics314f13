@@ -1,78 +1,58 @@
 ---
-title: "A02: Environment configuration"
+title: "A05: Open source software and the three prime directives"
 published: true
-morea_id: experience-environment-configuration-2
+morea_id: experience-oss-and-prime-directives
 morea_type: experience
-morea_summary: "Learn how to configure your development environment."
+morea_summary: "Analyze an open source software project to see if it conforms to the three prime directives"
 morea_sort_order: 2
 morea_labels:
 ---
 
-# A02: Environment configuration
+# A05: Open source software and the three prime directives
 
-For this assignment, you will begin the process of creating a high quality
-software engineering environment on your computer.
+## Goal
 
-## Task 1: Have appropriate hardware
+The goal of this assignment is for you to gain some experience using Java-
+based open source systems, and to gain an appreciation for the difficulties
+involved with achieving the [Three Prime Directives of Open Source Software
+Engineering](http://ics314f13.wordpress.com/course-info/the-prime-
+directives/). To do this, you will take the role of a user of an open source
+systems, and try to download, install, and use the package. You will write up
+your experiences for presentation in class and submission.
 
-Preferred hardware is a laptop with >= 2 Ghz processor, >= 2 GB RAM, >= 20 GB
-free disk space, and wireless access. As noted in the lecture, a Dell Laptop
-satisfies these requirements for $500-$1000. Note that “netbooks” are not
-suited for professional software development: while more portable, their
-screens are too small and they generally have less RAM and slower CPUs.
+## Requirements
 
-## Task 2: Install an appropriate operating system
+Go to [https://github.com/search?l=java&o=desc&q=stars%3A%3E1&s=stars&type=Repositories](https://github.com/search?l=java&o=desc&q=stars%3A%3E1&s=stars&type=Repositories), which will retrieve a listing of Java-based projects sorted
+such that those with the most stars are listed first. Look through this list
+for a Java-based open source project that looks interesting to you. If you're
+not interested in Android, you may have to search past the first few pages of
+hits. Attempt to download, install, and use the system. Then create a posting
+in your professional portfolio site that summarizes your experience. The entry
+should have the following sections:
 
-An up to date release of Mac OS/X or a Linux-based OS are the preferred
-operating systems for this class. If you must use Windows, you should use
-the latest release.
+  * Overview. This section describes the package you downloaded, its URL, and its stated objectives.  You will also want to overview [the three prime directives of open source software engineering](http://ics314f13.wordpress.com/course-info/the-prime-directives/).
+  * Prime Directive 1. This section presents your opinion as to whether PD#1 is satisfied. If so, what useful functionality is provided?
+  * Prime Directive 2. This section presents your opinion as to whether PD#2 is satisfied. Was it possible for you as a non-developer of the system to download, install, and actually benefit from the useful functionality?
+  * Prime Directive 3. This section presents your opinion as to whether PD#3 is satisfied. If you were going to attempt to modify and improve the system, how easy would it be for you to do so? Does the package include developer-level documentation to support this process?
 
-If needed, I can sign you up for MSDNAA, which will provide you with a free copy
-of the latest Windows OS.
-
-## Task 3: Install Java 7
-
-### Windows/Linux
-
-Download and install the Java 7 JDK and JavaDoc documentation
-from [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
-Be sure to download and install the "JDK" package, which includes both the JRE and additional tools such as ‘jar’ , ‘javadoc’, and ‘javac’. Don’t download the “JRE” package.
-
-On Windows, you must change the default installation directory to a file path that does not contain spaces. The default on Windows is c:\Program Files\Java, which is bogus. Change it to something like c:\Java. You will run into problems if you install the JDK inside c:\Program Files\.
-
-Add <java>/bin to your PATH variable, where <java> is replaced by the location where you installed it.
-
-Also download the Java SE 7 Documentation. Unzip the documentation package into <java>.
-If you have installed Java correctly, then you should be able to type “java
--version” and “jar -help” at the command line and get reasonable responses. If
-you have installed the documentation correctly, then you should be able to
-retrieve it in a browser using a local URL such as:
-`file:///C:/Java/jdk1.7.0_02/docs/index.html`. 
-
-The most useful link is to the
-JavaDocs, at an URL like: `file:///C:/Java/jdk1.7.0_02/docs/api/index.html`.
-
-### Macintosh
-
-You must be running Snow Leopard (10.6) or later. To ensure you
-are running Java 7 by default, see the [JDK 7 Mac Install Page](http://docs.oracle.com/javase/7/docs/webnotes/install/mac/mac-jdk.html).
-
-## Task 4: Spell Philip correctly
-
-For the past few semesters, a gentleman with the email address
-‘phillipmjohnson@gmail.com’ has been receiving emails from ICS software
-engineering students intended for me. He is quite frustrated and wants this to
-stop. I apologized, told him that I would make a point of informing the class
-of the correct spelling (philipmjohnson@gmail.com), and that he should simply
-delete any future emails without replying. So, be very careful to spell my
-name correctly. If you misspell it on an assignment submission, you might not
-get credit!
+Your entry should be well written and of professional caliber. It should
+consist of complete sentences, and contain no spelling errors or grammatical
+mistakes. View this as similar to a preliminary report to the Chief Technology
+Officer of a high tech company regarding whether or not the open source
+package should be adopted by the company or not. For each Prime Directive,
+provide actual examples ("evidence") from your usage of the system to justify
+your opinion. Include at least one screen image to illustrate how the program
+looks. Make sure that when I click on the "Postings" menu item in your
+professional portfolio, this posting appears along with others. If not, you
+have probably not set up your "Categories" correctly. See the screencast for
+more details. You must work alone on this project.
 
 ## Submission instructions
 
-You are expected to bring your laptop to class every day. During a class
-period on or after the date associated with this assignment on the Calendar
-page, I will review your environment in class.
-
-
+By the date and time on the Schedule page, send johnson@hawaii.edu an email
+containing the URL to your posting. Your URL should start with "http:" so that
+my mailer will recognize it as an URL and make it clickable. Note: the
+subject line must be **[ICS 314: A05]**. If the subject line is different,
+then I might not see the email and you might not get credit for this
+assignment.
 
