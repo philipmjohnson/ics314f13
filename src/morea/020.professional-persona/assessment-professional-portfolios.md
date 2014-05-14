@@ -1,5 +1,5 @@
 ---
-title: "Assessment of professional portfolios"
+title: "Professional portfolios"
 published: true
 morea_id: assessment-professional-portfolio
 morea_type: assessment
