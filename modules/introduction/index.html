@@ -250,7 +250,7 @@
 
     
       
-      <h3>Assessment 1: Assessment of environment configuration</h3>
+      <h3>Assessment 1: Environment configuration</h3>
       <p>
         
       </p>
@@ -261,28 +261,31 @@
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <div class="well">
       <div id="assessment-environment-configuration" style="height: 150px;"></div>
     </div>
   </div>
 
-  <div class="col-sm-4">
-    <p>
-    This assessment verified that students obtained laptops with the appropriate hardware, had the
-    appropriate operating system installed, and had successfully installed the appropriate version of Java. 
-    </p>
+  <div class="col-sm-6">
+    <p>This assessment verified that students obtained laptops with the appropriate hardware, had the
+appropriate operating system installed, and had successfully installed the appropriate version of Java. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>Almost all students complied with requirements. Those who didn’t had inappropriate hardware.</li>
+</ul>
+
   </div>
-</div>
 
 <script>
 Morris.Bar({
   element: 'assessment-environment-configuration',
   hideHover: 'auto',
-  data: [
-        { y: 'Satisfactory (%)', num: 80 },
-        { y: 'Unsatisfactory (%)', num: 20 },
-        ],
+  data: [{ y: 'Satisfactory (%)', num: 80 },
+ { y: 'Unsatisfactory (%)', num: 20 }]
+,
   xkey: 'y',
   ykeys: ['num'],
   resize: true,
@@ -290,10 +293,11 @@ Morris.Bar({
 });
 </script>
 
+</div>
 
     
       
-      <h3>Assessment 2: Assessment of discussion posting</h3>
+      <h3>Assessment 2: Discussion group posting</h3>
       <p>
         
       </p>
@@ -304,28 +308,31 @@ Morris.Bar({
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <div class="well">
       <div id="assessment-discussion-posting" style="height: 150px;"></div>
     </div>
   </div>
 
-  <div class="col-sm-4">
-    <p>
-    This assessment verified that students subscribed to the class newsgroup and 
-    posted an introductory message about themselves. 
-    </p>
+  <div class="col-sm-6">
+    <p>This assessment verified that students learned how to subscribe to the class newsgroup and 
+how to post an introductory message about themselves. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>All students fulfilled the objectives. </li>
+</ul>
+
   </div>
-</div>
 
 <script>
 Morris.Bar({
   element: 'assessment-discussion-posting',
   hideHover: 'auto',
-  data: [
-        { y: 'Satisfactory (%)', num: 100 },
-        { y: 'Unsatisfactory (%)', num: 0 },
-        ],
+  data: [{ y: 'Satisfactory (%)', num: 100 },
+ { y: 'Unsatisfactory (%)', num: 0 }]
+,
   xkey: 'y',
   ykeys: ['num'],
   resize: true,
@@ -333,6 +340,7 @@ Morris.Bar({
 });
 </script>
 
+</div>
 
     
 
@@ -354,7 +362,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a style="color: white" href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-05-14 10:08:22 -1000</span></p>
+       Last update on: <span>2014-05-14 10:38:11 -1000</span></p>
   </div>
 </footer>
 </div>

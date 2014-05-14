@@ -5,28 +5,31 @@
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <div class="well">
       <div id="assessment-discussion-posting" style="height: 150px;"></div>
     </div>
   </div>
 
-  <div class="col-sm-4">
-    <p>
-    This assessment verified that students subscribed to the class newsgroup and 
-    posted an introductory message about themselves. 
-    </p>
+  <div class="col-sm-6">
+    <p>This assessment verified that students learned how to subscribe to the class newsgroup and 
+how to post an introductory message about themselves. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>All students fulfilled the objectives. </li>
+</ul>
+
   </div>
-</div>
 
 <script>
 Morris.Bar({
   element: 'assessment-discussion-posting',
   hideHover: 'auto',
-  data: [
-        { y: 'Satisfactory (%)', num: 100 },
-        { y: 'Unsatisfactory (%)', num: 0 },
-        ],
+  data: [{ y: 'Satisfactory (%)', num: 100 },
+ { y: 'Unsatisfactory (%)', num: 0 }]
+,
   xkey: 'y',
   ykeys: ['num'],
   resize: true,
@@ -34,3 +37,4 @@ Morris.Bar({
 });
 </script>
 
+</div>

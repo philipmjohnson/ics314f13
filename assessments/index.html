@@ -61,7 +61,7 @@
 
     
       
-      <h3>Assessment 1: Assessment of environment configuration</h3>
+      <h3>Assessment 1: Environment configuration</h3>
       <p>
         
       </p>
@@ -72,28 +72,31 @@
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <div class="well">
       <div id="assessment-environment-configuration" style="height: 150px;"></div>
     </div>
   </div>
 
-  <div class="col-sm-4">
-    <p>
-    This assessment verified that students obtained laptops with the appropriate hardware, had the
-    appropriate operating system installed, and had successfully installed the appropriate version of Java. 
-    </p>
+  <div class="col-sm-6">
+    <p>This assessment verified that students obtained laptops with the appropriate hardware, had the
+appropriate operating system installed, and had successfully installed the appropriate version of Java. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>Almost all students complied with requirements. Those who didn’t had inappropriate hardware.</li>
+</ul>
+
   </div>
-</div>
 
 <script>
 Morris.Bar({
   element: 'assessment-environment-configuration',
   hideHover: 'auto',
-  data: [
-        { y: 'Satisfactory (%)', num: 80 },
-        { y: 'Unsatisfactory (%)', num: 20 },
-        ],
+  data: [{ y: 'Satisfactory (%)', num: 80 },
+ { y: 'Unsatisfactory (%)', num: 20 }]
+,
   xkey: 'y',
   ykeys: ['num'],
   resize: true,
@@ -101,10 +104,11 @@ Morris.Bar({
 });
 </script>
 
+</div>
 
     
       
-      <h3>Assessment 2: Assessment of discussion posting</h3>
+      <h3>Assessment 2: Discussion group posting</h3>
       <p>
         
       </p>
@@ -115,28 +119,31 @@ Morris.Bar({
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <div class="well">
       <div id="assessment-discussion-posting" style="height: 150px;"></div>
     </div>
   </div>
 
-  <div class="col-sm-4">
-    <p>
-    This assessment verified that students subscribed to the class newsgroup and 
-    posted an introductory message about themselves. 
-    </p>
+  <div class="col-sm-6">
+    <p>This assessment verified that students learned how to subscribe to the class newsgroup and 
+how to post an introductory message about themselves. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>All students fulfilled the objectives. </li>
+</ul>
+
   </div>
-</div>
 
 <script>
 Morris.Bar({
   element: 'assessment-discussion-posting',
   hideHover: 'auto',
-  data: [
-        { y: 'Satisfactory (%)', num: 100 },
-        { y: 'Unsatisfactory (%)', num: 0 },
-        ],
+  data: [{ y: 'Satisfactory (%)', num: 100 },
+ { y: 'Unsatisfactory (%)', num: 0 }]
+,
   xkey: 'y',
   ykeys: ['num'],
   resize: true,
@@ -144,6 +151,7 @@ Morris.Bar({
 });
 </script>
 
+</div>
 
     
   </div>
@@ -157,7 +165,7 @@ Morris.Bar({
 
     
       
-      <h3>Assessment 1: Assessment of professional portfolios</h3>
+      <h3>Assessment 1: Professional portfolios</h3>
       <p>
         
       </p>
@@ -210,7 +218,7 @@ Morris.Bar({
 
     
       
-      <h3>Assessment 2: Assessment of professional networks</h3>
+      <h3>Assessment 2: Professional networks</h3>
       <p>
         
       </p>
@@ -221,33 +229,41 @@ Morris.Bar({
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <div class="well">
       <div id="assessment-professional-networks" style="height: 150px;"></div>
     </div>
   </div>
 
-  <div class="col-sm-4">
-    <p>
-    This assessment verified that students joined the TechHui and LinkedIn professional
-    networks and set up appropriate profiles. 
-    </p>
+  <div class="col-sm-6">
+    
+<p>This assessment verified that students learned how to join the TechHui and LinkedIn professional
+networks and set up appropriate profiles. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>The students who did not appeared to be intending to drop the class. </li>
+</ul>
+
   </div>
 
 <script>
 Morris.Bar({
   element: 'assessment-professional-networks',
   hideHover: 'auto',
-  data: [
-        { y: 'Satisfactory (%)', num: 90 },
-        { y: 'Unsatisfactory (%)', num: 10 },
-        ],
+  data: 
+[{ y: 'Satisfactory (%)', num: 90 },
+ { y: 'Unsatisfactory (%)', num: 10 }]
+,
   xkey: 'y',
   ykeys: ['num'],
   resize: true,
   labels: ['Students']
 });
 </script>
+
+
 </div>
 
     
@@ -262,7 +278,7 @@ Morris.Bar({
 
     
       
-      <h3>Assessment 1: Assessment of basic Java, Eclipse, and technical writing capability</h3>
+      <h3>Assessment 1: Java, Eclipse, and writing capability</h3>
       <p>
         
       </p>
@@ -273,38 +289,44 @@ Morris.Bar({
 <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-sm-6">
     <div class="well">
       <div id="assessment-fizzbuzz-in-eclipse" style="height: 150px;"></div>
     </div>
   </div>
 
-  <div class="col-sm-4">
-    <p>
-    This assessment assessed the ability of the students to implement a very 
-    simple Java programming using the Eclipse IDE and write up their experiences
-    in an appropriate manner.
-    </p>
-    <p>
-    Results: All students were able to implement the system. 15% of the students
-    were not able to write an appropriate posting about their experience.
-  
+  <div class="col-sm-6">
+    
+<p>This assessment verified that students could implement a trivial Java program 
+using the Eclipse IDE and write up their experiences in an appropriate manner.</p>
+
+<p>Discussion:  </p>
+
+<ul>
+  <li>All students were able to implement the (trivial) system. </li>
+  <li>10% of the students wrote an excellent posting.</li>
+  <li>15% of the students wrote postings with significant grammatical problems or without useful insight.</li>
+</ul>
+
+  </div>
 
 <script>
 Morris.Bar({
   element: 'assessment-fizzbuzz-in-eclipse',
   hideHover: 'auto',
-  data: [
-        { y: 'Satisfactory (%)', num: 85 },
-        { y: 'Unsatisfactory (%)', num: 15 },
-        ],
+  data: 
+[{ y: 'Excellent (%)', num: 10 },
+ { y: 'Satisfactory (%)', num: 75 },
+ { y: 'Unsatisfactory (%)', num: 15 }]
+,
   xkey: 'y',
   ykeys: ['num'],
   resize: true,
   labels: ['Students']
 });
 </script>
-</p></div></div>
+
+</div>
 
     
   </div>
@@ -323,7 +345,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a style="color: white" href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-05-14 10:08:22 -1000</span></p>
+       Last update on: <span>2014-05-14 10:38:11 -1000</span></p>
   </div>
 </footer>
 </div>
