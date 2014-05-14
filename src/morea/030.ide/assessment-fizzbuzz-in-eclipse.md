@@ -1,0 +1,44 @@
+---
+title: "Assessment of basic Java, Eclipse, and technical writing capability"
+published: true
+morea_id: assessment-fizzbuzz-in-eclipse
+morea_type: assessment
+morea_sort_order: 1
+---
+
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-8">
+    <div class="well">
+      <div id="assessment-fizzbuzz-in-eclipse" style="height: 150px;"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <p>
+    This assessment assessed the ability of the students to implement a very 
+    simple Java programming using the Eclipse IDE and write up their experiences
+    in an appropriate manner.
+    </p>
+    <p>
+    Results: All students were able to implement the system. 15% of the students
+    were not able to write an appropriate posting about their experience.
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-fizzbuzz-in-eclipse',
+  hideHover: 'auto',
+  data: [
+        { y: 'Satisfactory (%)', num: 85 },
+        { y: 'Unsatisfactory (%)', num: 15 },
+        ],
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
