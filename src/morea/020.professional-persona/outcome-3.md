@@ -1,5 +1,5 @@
 ---
-title: "Technical Writing"
+title: "Create high quality technical writing"
 published: true
 morea_id: outcome-technical-writing
 morea_type: outcome

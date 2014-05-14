@@ -1,7 +1,7 @@
 ---
 title: "Integrated development environments"
 published: true
-morea_id: integrated-development-environnments
+morea_id: integrated-development-environments
 morea_outcomes:
  - outcome-ide-benefits
  - outcome-eclipse-capability
@@ -24,7 +24,7 @@ morea_labels:
 morea_sort_order: 3
 ---
 
-Concepts of integrated development environments, how to get started learning the Eclipse IDE.
+Concepts of coding standards, initial standards for ICS 314. 
 
 
 

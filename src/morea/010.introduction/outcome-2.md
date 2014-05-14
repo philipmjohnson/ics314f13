@@ -1,5 +1,5 @@
 ---
-title: "Development environment successfully installed"
+title: "Install an appropriate development environment"
 published: true
 morea_id: outcome-development-environment
 morea_type: outcome

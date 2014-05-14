@@ -1,5 +1,5 @@
 ---
-title: "Networking"
+title: "Develop professional networks"
 published: true
 morea_id: outcome-networking
 morea_type: outcome
