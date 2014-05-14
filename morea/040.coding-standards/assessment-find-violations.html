@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-find-violations" style="height: 150px;"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <p>This in-class assessment verified that students could find basic violations of the Elements of Java Style 
+in sample Java code when working in a team. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>The game does not preclude that some players might be “free-riders”, but most players appear to have increased 
+their knowledge of EJS by playing.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-find-violations',
+  hideHover: 'auto',
+  data: [{ y: 'Satisfactory (%)', num: 100 },
+ { y: 'Unsatisfactory (%)', num: 0 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+</div>
