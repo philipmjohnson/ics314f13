@@ -6,11 +6,16 @@ morea_outcomes:
  - outcome-create-standards-compliant-code
  - outcome-eclipse-capability
  - outcome-write-code-efficiently
+ - outcome-technical-writing
 morea_readings:
  - reading-screencast-professional-persona
 morea_experiences:
  - experience-file-io-countlines
  - experience-file-io-countwords
+ - experience-web-io-countwords
+ - experience-web-io-counturl
+ - experience-web-io-frequencyurl
+ - experience-java-coding-technical-report
 morea_assessments:
  - assessment-professional-portfolio
 morea_type: module
