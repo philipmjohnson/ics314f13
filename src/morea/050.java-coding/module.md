@@ -9,7 +9,7 @@ morea_outcomes:
 morea_readings:
  - reading-screencast-professional-persona
 morea_experiences:
- - experience-create-portfolio-site
+ - experience-file-io-countlines
 morea_assessments:
  - assessment-professional-portfolio
 morea_type: module
