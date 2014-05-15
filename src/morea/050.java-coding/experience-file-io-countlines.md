@@ -8,7 +8,7 @@ morea_sort_order: 1
 morea_labels:
 ---
 
-# Practice WOD: File IO Countlines
+# Practice WOD: File IO CountLines
 
 Prior to starting this WOD, you might want to familiarize yourself with [File IO in Java 7](http://docs.oracle.com/javase/tutorial/essential/io/fileio.html). 
 
@@ -28,7 +28,7 @@ When finished, stop your timer, and record how many minutes it took you to compl
 
 Once you've finished doing the WOD a single time, watch me do it:
 
-{% include video.html url="http://www.youtube.com/embed/lbh5q9Lj-As" %}
+{% include youtube.html id="lbh5q9Lj-As" %}
 
 {% include wod-warning.html %}
 

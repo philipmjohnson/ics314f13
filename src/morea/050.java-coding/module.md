@@ -10,6 +10,7 @@ morea_readings:
  - reading-screencast-professional-persona
 morea_experiences:
  - experience-file-io-countlines
+ - experience-file-io-countwords
 morea_assessments:
  - assessment-professional-portfolio
 morea_type: module
