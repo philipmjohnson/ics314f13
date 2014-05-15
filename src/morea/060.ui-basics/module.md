@@ -11,7 +11,10 @@ morea_experiences:
  - experience-browserhistory1
  - experience-browserhistory2
  - experience-browserhistory3
+ - experience-ui-basics-technical-essay
 morea_assessments:
+ - assessment-ui-basics-technical-essay
+ - assessment-wod-browserhistory4
 morea_type: module
 morea_icon_url: /morea/060.ui-basics/logo.jpg
 morea_labels:

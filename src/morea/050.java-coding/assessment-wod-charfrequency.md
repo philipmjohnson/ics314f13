@@ -22,6 +22,7 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-morris-chart-wod.html Rx="< 10 min" Av="10-15 min" Sd="15-25 min" DNF="25+ min or incorrect"  %}
+
 
 

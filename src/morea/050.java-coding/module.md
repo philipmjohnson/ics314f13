@@ -18,9 +18,9 @@ morea_experiences:
  - experience-web-io-countwords
  - experience-web-io-counturl
  - experience-web-io-frequencyurl
- - experience-java-coding-technical-report
+ - experience-java-coding-technical-essay
 morea_assessments:
- - assessment-java-coding-technical-report
+ - assessment-java-coding-technical-essay
  - assessment-wod-charfrequency
 morea_type: module
 morea_icon_url: /morea/050.java-coding/logo.png

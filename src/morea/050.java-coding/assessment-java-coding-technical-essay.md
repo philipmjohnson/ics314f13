@@ -1,7 +1,7 @@
 ---
-title: "Java Coding Technical Report"
+title: "Java Coding Technical Essay"
 published: true
-morea_id: assessment-java-coding-technical-report
+morea_id: assessment-java-coding-technical-essay
 morea_type: assessment
 morea_sort_order: 1
 morea_labels:
@@ -10,8 +10,7 @@ morea_morris_chart_data: |
    { y: 'Unsatisfactory', num: 4 }]
 
 morea_morris_chart_caption: |
- This assessment evaluating the ability of students to write a high quality technical report summarizing their experiences doing the 
- Java Coding practice WODs.
+ This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Java Coding practice WODs.
 
  Discussion:
 
