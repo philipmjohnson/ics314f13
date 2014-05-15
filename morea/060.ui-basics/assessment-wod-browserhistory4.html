@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-wod-browserhistory4" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 10 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 10-15 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 15-20 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 20+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>BrowserHistory4 is a slight variant of the BrowserHistory3 practice WOD.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>
+    <p>Once again, only about half the class finished the WOD successfully. In contrast to last week, in which the DNFers actually did not turn anything in, this week all but two students turned in their code prior to the cut-off time.   This means that in seven cases, students submitted solutions that upon review were not correct.</p>
+  </li>
+  <li>
+    <p>In some of these cases, the difference between the submission and the reference screenshot shown in the WOD was so obvious that I wonder if those students simply “gave up” once it got close to the DNF time. In other cases, it could be that the students simply overlooked a problem with their approach before turning it in.    </p>
+  </li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-wod-browserhistory4',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 1 },
+ { y: 'Av', num: 7 },
+ { y: 'Sd', num: 1 },
+ { y: 'DNF', num: 9 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
