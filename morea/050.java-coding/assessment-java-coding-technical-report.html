@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-java-coding-technical-report" style="height: 150px;"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <p>This assessment evaluating the ability of students to write a high quality technical report summarizing their experiences doing the 
+Java Coding practice WODs.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>
+    <p>Please report all of the times for all of your attempts, and discuss what changed between attempts.  This provides a reader with insight into how exactly you learn from doing the same programming problem more than once. </p>
+  </li>
+  <li>
+    <p>Take time to reflect upon your experience. That is an important part of the learning experience.  These blog postings are ultimately for you, not for me.  Make them valuable.   Don’t finish the WODs at 8:55pm on Tuesday leaving you only 5 minutes to throw together a posting.  That eliminates a learning opportunity.</p>
+  </li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-java-coding-technical-report',
+  hideHover: 'auto',
+  data: [{ y: 'Satisfactory (%)', num: 80 },
+ { y: 'Unsatisfactory (%)', num: 20 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+</div>

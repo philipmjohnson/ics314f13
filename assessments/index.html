@@ -398,7 +398,7 @@ Morris.Bar({
 
     
       
-      <h3>Assessment 1: Professional portfolios</h3>
+      <h3>Assessment 1: Java Coding Technical Report</h3>
       <p>
         
       </p>
@@ -411,32 +411,83 @@ Morris.Bar({
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-professional-portfolio" style="height: 150px;"></div>
+      <div id="assessment-java-coding-technical-report" style="height: 150px;"></div>
     </div>
   </div>
 
   <div class="col-sm-6">
-    
-<p>This assessment verified that students implemented a professional portfolio 
-that satisfied the guidelines in the <a href="/morea/020.professional-persona/reading-4.html">Professional Portfolio Style Guide</a>.</p>
+    <p>This assessment evaluating the ability of students to write a high quality technical report summarizing their experiences doing the 
+Java Coding practice WODs.</p>
 
 <p>Discussion:</p>
 
 <ul>
-  <li>Some portfolios failed checklist items (remove commenting mechanism, poor home page picture, navbar does not link directly to PDF resume, home page not informative)</li>
-  <li>Some resumes were poor quality (comic sans font)</li>
+  <li>
+    <p>Please report all of the times for all of your attempts, and discuss what changed between attempts.  This provides a reader with insight into how exactly you learn from doing the same programming problem more than once. </p>
+  </li>
+  <li>
+    <p>Take time to reflect upon your experience. That is an important part of the learning experience.  These blog postings are ultimately for you, not for me.  Make them valuable.   Don’t finish the WODs at 8:55pm on Tuesday leaving you only 5 minutes to throw together a posting.  That eliminates a learning opportunity.</p>
+  </li>
 </ul>
 
   </div>
 
 <script>
 Morris.Bar({
-  element: 'assessment-professional-portfolio',
+  element: 'assessment-java-coding-technical-report',
+  hideHover: 'auto',
+  data: [{ y: 'Satisfactory (%)', num: 80 },
+ { y: 'Unsatisfactory (%)', num: 20 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+</div>
+
+    
+      
+      <h3>Assessment 2: WOD: CharFrequency</h3>
+      <p>
+        
+      </p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-wod-charfrequency" style="height: 150px;"></div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>CharFrequency is the first “real” WOD of the semester. Students were asked to implement a Java program which differs only slightly from the last Java Practice WOD.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>Half the class completed the WOD successfully, which is a reasonable starting point.  My hope is that the percentage of DNFs will decrease as the semester continues and everyone gets more experienced.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-wod-charfrequency',
   hideHover: 'auto',
   data: 
-[{ y: 'Excellent (%)', num: 500 },
- { y: 'Satisfactory (%)', num: 20 },
- { y: 'Unsatisfactory (%)', num: 30 }]
+[{ y: 'Rx', num: 3 },
+ { y: 'Av', num: 4 },
+ { y: 'Sd', num: 5 },
+ { y: 'DNF', num: 10 }]
 ,
   xkey: 'y',
   ykeys: ['num'],
@@ -466,7 +517,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a style="color: white" href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-05-14 22:05:09 -1000</span></p>
+       Last update on: <span>2014-05-14 22:22:11 -1000</span></p>
   </div>
 </footer>
 </div>
