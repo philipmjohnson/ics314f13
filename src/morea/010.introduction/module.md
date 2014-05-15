@@ -7,6 +7,8 @@ morea_outcomes:
  - outcome-development-environment
 morea_readings:
  - reading-preparation
+ - reading-grading
+ - reading-how-to-watch-screencasts-the-smart-way
  - reading-screencast-intro
  - reading-programming-achievements
  - reading-dress-code

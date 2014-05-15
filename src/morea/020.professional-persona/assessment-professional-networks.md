@@ -6,8 +6,8 @@ morea_type: assessment
 morea_sort_order: 2
 morea_morris_chart_data: |
 
-  [{ y: 'Satisfactory (%)', num: 90 },
-   { y: 'Unsatisfactory (%)', num: 10 }]
+  [{ y: 'Satisfactory', num: 22 },
+   { y: 'Unsatisfactory', num: 4 }]
 
 morea_morris_chart_caption: |
 

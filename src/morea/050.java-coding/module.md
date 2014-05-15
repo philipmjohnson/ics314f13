@@ -5,9 +5,13 @@ morea_id: java-coding
 morea_outcomes:
  - outcome-create-standards-compliant-code
  - outcome-eclipse-capability
+ - outcome-coding-standards-benefits
  - outcome-write-code-efficiently
  - outcome-technical-writing
 morea_readings:
+ - reading-wod-weekly-rhythm
+ - reading-wod
+ - reading-hebs
 morea_experiences:
  - experience-file-io-countlines
  - experience-file-io-countwords

@@ -7,9 +7,9 @@ morea_sort_order: 1
 
 morea_morris_chart_data: |
 
-  [{ y: 'Excellent (%)', num: 500 },
-   { y: 'Satisfactory (%)', num: 20 },
-   { y: 'Unsatisfactory (%)', num: 30 }]
+  [{ y: 'Excellent', num: 2},
+   { y: 'Satisfactory', num: 20 },
+   { y: 'Unsatisfactory', num: 4 }]
 
 morea_morris_chart_caption: |
 
