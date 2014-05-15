@@ -8,7 +8,6 @@ morea_outcomes:
  - outcome-write-code-efficiently
  - outcome-technical-writing
 morea_readings:
- - reading-screencast-professional-persona
 morea_experiences:
  - experience-file-io-countlines
  - experience-file-io-countwords
@@ -17,7 +16,8 @@ morea_experiences:
  - experience-web-io-frequencyurl
  - experience-java-coding-technical-report
 morea_assessments:
- - assessment-professional-portfolio
+ - assessment-java-coding-technical-report
+ - assessment-wod-charfrequency
 morea_type: module
 morea_icon_url: /morea/050.java-coding/logo.png
 morea_labels:
