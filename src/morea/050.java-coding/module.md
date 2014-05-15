@@ -9,8 +9,8 @@ morea_outcomes:
  - outcome-write-code-efficiently
  - outcome-technical-writing
 morea_readings:
+ - reading-athletic-software-engineering
  - reading-wod-weekly-rhythm
- - reading-wod
  - reading-hebs
 morea_experiences:
  - experience-file-io-countlines

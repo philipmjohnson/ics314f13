@@ -6,4 +6,4 @@ morea_type: outcome
 morea_sort_order: 12
 ---
 
-You can implement correct Java code in a short period of time. 
+You can implement correctly functioning Java code in a short period of time. 

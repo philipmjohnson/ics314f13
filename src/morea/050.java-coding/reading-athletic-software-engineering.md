@@ -1,13 +1,13 @@
 ---
-title: "What is a WOD?"
+title: "Athletic Software Engineering"
 published: true
-morea_id: reading-wod
-morea_summary: "Workout of the Day: An athletic approach to software engineering"
+morea_id: reading-athletic-software-engineering
+morea_summary: "An 'athletic' approach to software engineering education using Workouts of the Day."
 morea_type: reading
 morea_sort_order: 8
 ---
 
-# Workout of the day: an athletic approach to software engineering
+# An athletic approach to software engineering
 
 [CrossFit](http://www.crossfit.com/) has the concept of a "Workout of the Day"
 ([WOD](http://www.crossfit.com/cf-info/faq.html#General0)), which is a short
@@ -19,6 +19,9 @@ problems, you will:
   1. Gain fluency with your tools and technologies.
   2. Gain the ability to focus and enter the "flow state" during software development.
   3. Become more productive and useful in "bursty" development environments like [startup weekends](http://startupweekend.org/).
+
+For more background on my approach to "athletic software engineering", you can read
+this [essay](http://philipmjohnson.org/2013/07/12/athletic-software-engineering-education/).
 
 ## Rx, Av, Sd, DNF
 

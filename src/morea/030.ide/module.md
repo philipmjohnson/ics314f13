@@ -24,7 +24,7 @@ morea_labels:
 morea_sort_order: 3
 ---
 
-Concepts of coding standards, initial standards for ICS 314. 
+Introduction to integrated development environments and Eclipse.
 
 
 
