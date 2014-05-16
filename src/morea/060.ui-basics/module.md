@@ -3,6 +3,7 @@ title: "UI Basics"
 published: true
 morea_id: ui-basics
 morea_outcomes:
+ - outcome-eclipse-capability
  - outcome-html-css
 morea_readings:
  - reading-screencast-ui-basics

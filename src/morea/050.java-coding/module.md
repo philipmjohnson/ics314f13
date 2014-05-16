@@ -3,9 +3,9 @@ title: "Java coding"
 published: true
 morea_id: java-coding
 morea_outcomes:
+ - outcome-coding-standards-benefits
  - outcome-create-standards-compliant-code
  - outcome-eclipse-capability
- - outcome-coding-standards-benefits
  - outcome-write-code-efficiently
  - outcome-technical-writing
 morea_readings:

@@ -6,5 +6,5 @@ morea_type: outcome
 morea_sort_order: 5
 ---
 
-You demonstrate the ability to write professional-quality technical reports or to have significantly 
-improved your skill at this task since your last report. 
+You demonstrate the ability to write professional-quality technical essays or to have significantly 
+improved your skill at this task since your last essay. 

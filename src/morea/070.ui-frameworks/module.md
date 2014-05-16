@@ -3,6 +3,7 @@ title: "UI Frameworks"
 published: true
 morea_id: ui-frameworks
 morea_outcomes:
+ - outcome-eclipse-capability
  - outcome-html-css
  - outcome-twitter-bootstrap
 morea_readings:
