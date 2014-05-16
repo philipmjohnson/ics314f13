@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice WOD: ResponsiveCastleHighSchool | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-wod-responsivecastlehighschool">Practice WOD: ResponsiveCastleHighSchool</h1>
+
+<p>Castle High School has an old school website: fixed-width, a “marquee” with sliding text, and vaguely superfluous color gradients:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/09/castlehigh.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/castlehigh.png" /></a>
+  </div>
+</div>
+
+<p>Be sure to take a moment and <a href="http://castlehs.k12.hi.us/">visit the Castle High School site</a> as preparation for this WOD.</p>
+
+<p>Let’s give them the beginnings of a website make-over using Twitter Bootstrap.  We’ll keep the banner image, the three column layout, and the central picture.  But we’ll make everything responsive and use a more modern “flat” design. Here’s what you should shoot for:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/09/responsivecastlehigh.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/responsivecastlehigh.png" /></a>
+  </div>
+</div>
+
+<p>For this make-over, we’ll incorporate two colors from the original design: the red and the gray.  We get rid of the marquee.  For this prototype, we won’t include all the content from the home page, just the top parts of the three columns.  Finally, to improve the usability, we’ll eliminate the center section entirely from the mobile layout:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/09/responsivecastlehighmobile.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/responsivecastlehighmobile.png" /></a>
+  </div>
+</div>
+
+<h2 id="instructions">Instructions</h2>
+
+<ol>
+  <li>Start your timer.</li>
+  <li>Create an Eclipse project called ResponsiveCastleHigh and use it to implement a version of the Castle High School home page using Twitter Bootstrap.</li>
+  <li>Base your design on the <a href="https://github.com/ics-software-engineering/bootstrap-example-intro/tree/thesesareus">bootstrap-example-intro thesesareus template</a>.  (This provides template code for a three column layout).</li>
+  <li>Load the Open Sans google font.</li>
+  <li>Change the bootswatch simplex theme back to the default bootstrap theme.</li>
+  <li>Use #710C0C as the red color and #999 as the gray color.</li>
+  <li>Remove ThesesAreUs CSS styles.</li>
+  <li>Put the <a href="http://castlehs.k12.hi.us/images/header.jpg">Castle High School banner image</a> at the top of the page</li>
+  <li>Below the banner image, put the navbar.  Make the navbar background red and the text gray.</li>
+  <li>Set the navbar link names to those from the real site.</li>
+  <li>Make the background of the entire page gray.</li>
+  <li>Make navbar links and titles 16px. </li>
+  <li>Replace the default Helvetica font with Open Sans everywhere in the site.</li>
+  <li>Below the navbar, put three columns: a col-md-3 “Information” column, a col-md-6 “Welcome to Castle High School” column  and a col-md-3 “Announcements” column.</li>
+  <li>Make the background of all wells red, and their text gray.</li>
+  <li>Add 12 link labels taken from the real site to the Information column, make them gray, and remove the bullet (i.e. set list-style-type to none).</li>
+  <li>Add the <a href="http://castlehs.k12.hi.us/images/castlefront.jpg">Knight Pride image</a> to the middle column, centering it and making it 400px high.</li>
+  <li>Add the period schedule to the Announcements column.</li>
+  <li>Set the middle section to be hidden at mobile screen sizes.</li>
+</ol>
+
+<p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;30 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 30-40 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 40-50 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 50+ min</span>
+</span></p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Once you’ve finished doing the WOD a single time, watch me do it:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/FNcvH_6-hPI" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="standard-warning">Standard Warning</h2>
+
+<p>You’ll learn significantly less from watching me solve the
+WOD if you haven’t attempted the WOD yourself first.</p>
+
+<p>After watching my solution, I recommend that you repeat the WOD if you
+have not achieved at least Av performance. If so, be sure to:</p>
+
+<ul>
+  <li>Delete your old project so you cannot refer to it;</li>
+  <li>Don’t look at my screencast while you WOD; and</li>
+  <li>Reset your timer.</li>
+</ul>
+
+<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-15 14:14:01 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

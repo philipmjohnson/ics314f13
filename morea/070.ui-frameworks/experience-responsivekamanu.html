@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice WOD: ResponsiveKamanu | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-wod-responsivekamanu">Practice WOD: ResponsiveKamanu</h1>
+
+<p>Kamanu Composites is a local company that produces very high quality outrigger canoes. They also have a pretty nice website.  For this WOD, you will reimplement a portion of their home page using Twitter Bootstrap.  The goal of this exercise is to gain additional experience manipulating HTML, CSS,  Chrome Developer Tools,  and Twitter Bootstrap.</p>
+
+<p>Prior to starting this WOD, you may want to visit the <a href="http://www.kamanucomposites.com/">Kamanu Composites website</a>.   (Full disclosure: <a href="http://philipmjohnson.files.wordpress.com/2012/06/cropped-p1000649.jpg">I own a Pueo.</a>)</p>
+
+<p>Here is what your completed implementation should look like:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/09/responsive-kamanu.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/responsive-kamanu.png" /></a>
+  </div>
+</div>
+
+<p>And here are some hints to guide your implementation:</p>
+
+<ul>
+  <li>Your goal is to create a single page that mimics the first three elements of the Kamanu home page: the nav bar, the picture, and the tag line “We build canoes.” You do not have to implement any other aspect of their home page.</li>
+  <li>Base your implementation on the <a href="https://github.com/ics-software-engineering/bootstrap-example-intro/tree/basic">bootstrap-example-intro “basic” template</a>. That will give your page a responsive nav bar (which Kamanu Composites currently lacks.)</li>
+  <li>Prior to starting the WOD, download their <a href="http://www.kamanucomposites.com/static/images/header-logo.jpg">logo</a>, <a href="http://www.kamanucomposites.com/static/images/bg-carbon.jpg">navbar background image</a>, and <a href="http://www.kamanucomposites.com/static/images/www/pueo-canoes-front.jpg">paddling picture</a> and incorporate those graphical elements into your version.</li>
+  <li>Use  Chrome Developer Tools to inspect their page layout and figure out the fonts and colors they are using.</li>
+  <li>Use Chrome Developer Tools to inspect and override Twitter Bootstrap defaults as needed to mimic their site layout.</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+
+<ol>
+  <li>Start your timer.</li>
+  <li>Create an Eclipse project called ResponsiveKamanu and use it to implement a Bootstrap version of the Kamanu Composites home page. </li>
+  <li>Base your design on the <a href="https://github.com/ics-software-engineering/bootstrap-example-intro/tree/basic">bootstrap-example-intro basic template</a>.</li>
+  <li>Change the page title to “Responsive Kamanu”.</li>
+  <li>Incorporate the logo into the navbar.</li>
+  <li>Adjust the navbar so that excess padding around logo is removed.</li>
+  <li>Incorporate the Kamanu carbon fiber graphic as a repeated background image in the navbar. </li>
+  <li>Eliminate the black background from navbar menu items.</li>
+  <li>Edit the set of navbar items to be similar to those on the Kamanu website.</li>
+  <li>Adjust the font, position, and spacing of navbar items to be similar to the Kamanu website.</li>
+  <li>Incorporate the paddling picture underneath the navbar as a background image. Use background-size: cover, background-position: center, and height: 385px properties to get a pleasing appearance. </li>
+  <li>Adjust the body element so that the paddling picture shows up under the navbar.</li>
+  <li>Add the “tagline bar” (“We Build Canoes.”) into your page, making it look similar to the one on the Kamanu Website.</li>
+</ol>
+
+<p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;25 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 25-30 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 30-40 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 40+ min</span>
+</span></p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Once you’ve finished doing the WOD a single time, watch me do it:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/HxDd-SlTJfg" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="standard-warning">Standard Warning</h2>
+
+<p>You’ll learn significantly less from watching me solve the
+WOD if you haven’t attempted the WOD yourself first.</p>
+
+<p>After watching my solution, I recommend that you repeat the WOD if you
+have not achieved at least Av performance. If so, be sure to:</p>
+
+<ul>
+  <li>Delete your old project so you cannot refer to it;</li>
+  <li>Don’t look at my screencast while you WOD; and</li>
+  <li>Reset your timer.</li>
+</ul>
+
+<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-15 14:14:01 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
