@@ -1,5 +1,5 @@
 ---
-title: "WOD: Responsive Hokulani"
+title: "Individual WOD: Responsive Hokulani"
 published: true
 morea_id: assessment-wod-responsivehokulani
 morea_type: assessment

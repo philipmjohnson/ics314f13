@@ -24,6 +24,7 @@ morea_experiences:
  - experience-responsivecastlehighschool
  - experience-ui-frameworks-technical-essay
 morea_assessments:
+ - assessment-group-wod-color-blocked
  - assessment-ui-frameworks-technical-essay
  - assessment-wod-responsivehokulani
 morea_type: module

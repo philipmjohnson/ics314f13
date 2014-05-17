@@ -1,5 +1,5 @@
 ---
-title: "WOD: BrowserHistory4"
+title: "Individual WOD: BrowserHistory4"
 published: true
 morea_id: assessment-wod-browserhistory4
 morea_type: assessment
@@ -18,14 +18,9 @@ morea_morris_chart_caption: |
 
   Discussion:
 
-     * Once again, only about half the class finished the WOD successfully. In contrast to last week, in which the DNFers actually did not turn anything in, this week all but two students turned in their code prior to the cut-off time.   This means that in seven cases, students submitted solutions that upon review were not correct.
+     * Only half the class finished this individual WOD successfully. In contrast to last week, in which the DNFers actually did not turn anything in, this week all but two students turned in their code prior to the cut-off time.   This means that in seven cases, students submitted solutions that upon review were not correct.
 
      * In some of these cases, the difference between the submission and the reference screenshot shown in the WOD was so obvious that I wonder if those students simply “gave up” once it got close to the DNF time. In other cases, it could be that the students simply overlooked a problem with their approach before turning it in.    
-
-wod_rx: "< 10 min"
-wod_av: "10-15 min"
-wod_sd: "15-20 min"
-wod_dnf: "20+ or incorrect"
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "WOD: CharFrequency"
+title: "Individual WOD: CharFrequency"
 published: true
 morea_id: assessment-wod-charfrequency
 morea_type: assessment
@@ -14,7 +14,7 @@ morea_morris_chart_data: |
 
 morea_morris_chart_caption: |
 
-  CharFrequency is the first “real” WOD of the semester. Students were asked to implement a Java program which differs only slightly from the last Java Practice WOD.
+  CharFrequency is the first “real” WOD of the semester. Students were asked to individually implement a Java program which differs only slightly from the last Java Practice WOD.
 
   Discussion:
 

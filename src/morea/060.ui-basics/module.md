@@ -14,6 +14,7 @@ morea_experiences:
  - experience-browserhistory3
  - experience-ui-basics-technical-essay
 morea_assessments:
+ - assessment-group-wod-history-of-surfing
  - assessment-ui-basics-technical-essay
  - assessment-wod-browserhistory4
 morea_type: module

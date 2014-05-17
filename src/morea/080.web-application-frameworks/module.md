@@ -18,7 +18,17 @@ morea_readings:
  - reading-play-for-java-tutorial-guide
  - reading-play-coding-standards
 morea_experiences:
+ - experience-hellome
+ - experience-cleanhellome
+ - experience-playbootstrapbrowserhistory
+ - experience-play-page-development
+ - experience-multipageplaybootstrapbrowserhistory
+ - experience-playresponsivekamanu
+ - experience-web-application-frameworks-technical-essay
 morea_assessments:
+ - assessment-group-wod-playresponsivecastlehigh
+ - assessment-web-application-frameworks-technical-essay
+ - assessment-wod-multipagekamanu
 morea_type: module
 morea_icon_url: /morea/080.web-application-frameworks/logo.jpg
 morea_labels:
