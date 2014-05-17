@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-group-wod-playresponsivecastlehigh" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Students worked in groups in-class to create a Play application implementing a responsive version of a
+Castle High web page. </p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>Three groups did not complete this task in the 60 minutes provided.</li>
+  <li>The Play framework has a significant learning curve and many students did not appear to have spent
+much time on it yet. </li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-group-wod-playresponsivecastlehigh',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 0 },
+ { y: 'Av', num: 2 },
+ { y: 'Sd', num: 1 },
+ { y: 'DNF', num: 3 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>

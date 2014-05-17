@@ -220,6 +220,64 @@
 
     
       
+      <h3>Group WOD: History of Surfing</h3>
+      <p>
+        
+      </p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-group-wod-history-of-surfing" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Students worked in groups in-class to design a web page on the history of surfing.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>Only one group did not complete the task. </li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-group-wod-history-of-surfing',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 0 },
+ { y: 'Av', num: 3 },
+ { y: 'Sd', num: 2 },
+ { y: 'DNF', num: 1 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
+
+    
+      
       <h3>UI Basics Technical Essay</h3>
       <p>
         
@@ -278,7 +336,7 @@ Morris.Bar({
 
     
       
-      <h3>WOD: BrowserHistory4</h3>
+      <h3>Individual WOD: BrowserHistory4</h3>
       <p>
         
       </p>
@@ -309,7 +367,7 @@ Morris.Bar({
 
 <ul>
   <li>
-    <p>Once again, only about half the class finished the WOD successfully. In contrast to last week, in which the DNFers actually did not turn anything in, this week all but two students turned in their code prior to the cut-off time.   This means that in seven cases, students submitted solutions that upon review were not correct.</p>
+    <p>Only half the class finished this individual WOD successfully. In contrast to last week, in which the DNFers actually did not turn anything in, this week all but two students turned in their code prior to the cut-off time.   This means that in seven cases, students submitted solutions that upon review were not correct.</p>
   </li>
   <li>
     <p>In some of these cases, the difference between the submission and the reference screenshot shown in the WOD was so obvious that I wonder if those students simply “gave up” once it got close to the DNF time. In other cases, it could be that the students simply overlooked a problem with their approach before turning it in.    </p>
@@ -359,7 +417,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-05-16 07:26:00 -1000</span></p>
+       Last update on: <span>2014-05-16 18:08:40 -1000</span></p>
   </div>
 </footer>
 </div>
