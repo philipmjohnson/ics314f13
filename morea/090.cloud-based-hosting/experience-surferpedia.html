@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> Practice WOD: MultiPage PlayBootstrapBrowserHistory | ICS 314, Fall 2013 </title>
+  <title> Practice WOD: Surferpedia | ICS 314, Fall 2013 </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8">
 
@@ -50,44 +50,72 @@
 
 
 <div class="container">
-  <h1 id="practice-wod-multipage-playbootstrapbrowserhistory">Practice WOD: MultiPage PlayBootstrapBrowserHistory</h1>
+  <h1 id="practice-wod-surferpedia">Practice WOD: Surferpedia</h1>
 
-<p>Before starting this WOD, you should review the function of the “routes” file in Play and how it connects HTTP requests to controller actions. You’ll also need some basic understanding of view files.</p>
+<p>The goal of this WOD is to continue to practice the development of simple multipage web applications and publish them via GitHub.</p>
+
+<p>Before starting this WOD, please gather the following content:</p>
+
+<ul>
+  <li>A picture and 1-3 paragraphs of biographical information about a male surfer.</li>
+  <li>A picture and 1-3 paragraphs of biographical information about a female surfer.</li>
+  <li>A picture and 1-3 paragraphs of biographical information about a young surfer (in surfing parlance, young surfers are known as “groms”)</li>
+  <li>A picture useful as a header image (approximately 1000px by 300px).</li>
+</ul>
+
+<p>You might find the following sites to be of use in your research: http://www.surfermag.com/hot-100/, and http://surfing.wikia.com/wiki/Category:Surfers. </p>
+
+<p>Note: I highly recommend you do not pick the first surfer you find in each category, because you will later need to “swap” data with another classmate.  The more obscure the surfers in your surferpedia, the easier it will be for you later.  (Do you surf?  Do you have a shot of you shredding at Sandy’s?  Then make one of the entries about you! Have friends who surf? Add them as well!)</p>
 
 <h2 id="instructions">Instructions</h2>
 
+<p>For this WOD, you will publish your PlayResponsiveKamanu application as a GitHub repository. </p>
+
 <ol>
   <li>Start your timer.</li>
-  <li>Create a Play application called MultiPagePlayBootstrapBrowserHistory by downloading the play-bootstrap-template repository, then renaming the directory, the Eclipse project, and the Play project to “MultiPagePlayBootstrapBrowserHistory”.  </li>
-  <li>Enable Checkstyle on your project.   If there are any errors or warnings, remove them.</li>
-  <li>Create an application containing four pages: an index page with the overview of browser history, and three other pages containing history of IE, FireFox, and Chrome.   Use BootstrapBrowserHistory as your basis for these pages. </li>
+  <li>Create a GitHub repository called “surferpedia” that will host the source code for a Play web application providing biographical information about surfers.  </li>
+  <li>Base it on your play-dropdown-carousel code, renaming the directory, the Eclipse project, and the Play application to “surferpedia”.</li>
+  <li>Enable checkstyle.</li>
+  <li>Put your header image at the top of the site, with a navbar underneath.</li>
+  <li>Implement a drop-down menubar with a “Males”, “Females”, and “Groms” drop-down menu items. They go to entries containing links to your male, female, and grom bio pages. </li>
+  <li>The home page contains a carousel containing pictures of all surfers in the web app and provides their name as the caption for each photo.</li>
+  <li>There are three interior pages: one for each surfer.  The interior pages contain their photo and their biographical paragraph(s). You might want four columns for the photo and eight columns for the bio paragraph(s).</li>
+  <li>Commit your changes to GitHub.</li>
+  <li>Update the README.md file, and create a GitHub page for end-users.</li>
+  <li>Note that the GitHub repo containing your code should satisfy the requirements in GitHub Guidelines.</li>
 </ol>
 
-<p>The resulting application home page should look like this:</p>
+<p>Here’s what the application home page might look like:</p>
 
 <div class="center-block">
   <div class="img-responsive">
-    <a href="http://ics314f13.files.wordpress.com/2013/09/multipagehome.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/multipagehome.png" /></a>
+    <a href="http://ics314f13.files.wordpress.com/2013/09/surferpedia-home.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/surferpedia-home.png" /></a>
   </div>
 </div>
 
-<p>And a page related to a specific browser should look like this:</p>
+<p>And here’s what an interior page in the application might look like:</p>
 
 <div class="center-block">
   <div class="img-responsive">
-    <a href="http://ics314f13.files.wordpress.com/2013/09/multipageie.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/multipageie.png" /></a>
+    <a href="http://ics314f13.files.wordpress.com/2013/09/surferpedia-hynson.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/surferpedia-hynson.png" /></a>
   </div>
 </div>
 
-<p>Note that the navbar highlights the active page.</p>
+<p>Finally, here’s what the GitHub page for your repo might look like:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/09/surferpedia-enduser2.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/09/surferpedia-enduser2.png" /></a>
+  </div>
+</div>
 
 <p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
 
 <p><span class="h4">
-  <span style="padding: 2px" class="label label-success">Rx: &lt;17 min</span>
-  <span style="padding: 2px" class="label label-info">Av: 17-21 min</span>
-  <span style="padding: 2px" class="label label-warning">Sd: 21-25 min</span>
-  <span style="padding: 2px" class="label label-danger">DNF: 25+ min</span>
+  <span style="padding: 2px" class="label label-success">Rx: &lt;35 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 35-50 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 50-70 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 70+ min</span>
 </span></p>
 
 <h2 id="demonstration">Demonstration</h2>
@@ -95,7 +123,7 @@
 <p>Once you’ve finished doing the WOD a single time, watch me do it:</p>
 
 <div class="video-container">
-  <iframe src="http://www.youtube.com/embed/_Qo4PLQdBzs" frameborder="0" allowfullscreen=""></iframe>
+  <iframe src="http://www.youtube.com/embed/-IAAIhzNgvs" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
 <h2 id="standard-wod-caveats">Standard WOD Caveats</h2>

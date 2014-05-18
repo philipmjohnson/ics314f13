@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-paired-wod-surferpedia" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 30-40 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 40+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>This was the first paired WOD of the semester: students added a new page to a partner’s Surferpedia website.  To make matters more complicated, they could not speak to their partner; all interactions had to be through Google Hangout; and they shared their code through GitHub repositories.  The goal of this WOD is to test both website manipulation skills as well as software engineering collaboration skills.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>Again, relatively few DNFs on this WOD.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-paired-wod-surferpedia',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 2 },
+ { y: 'Av', num: 10 },
+ { y: 'Sd', num: 4 },
+ { y: 'DNF', num: 3 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
