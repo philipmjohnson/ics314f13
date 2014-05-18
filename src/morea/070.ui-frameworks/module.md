@@ -6,6 +6,7 @@ morea_outcomes:
  - outcome-eclipse-capability
  - outcome-html-css
  - outcome-twitter-bootstrap
+ - outcome-group-work
 morea_readings:
  - reading-screencast-ui-frameworks
  - reading-screencast-bootstrap-grids
