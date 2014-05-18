@@ -8,7 +8,6 @@ morea_outcomes:
  - outcome-write-code-efficiently
  - outcome-technical-writing
  - outcome-html-css
- - outcome-group-work
  - outcome-twitter-bootstrap
  - outcome-web-application-frameworks
  - outcome-play

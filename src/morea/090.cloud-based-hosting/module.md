@@ -8,10 +8,10 @@ morea_outcomes:
  - outcome-write-code-efficiently
  - outcome-technical-writing
  - outcome-html-css
- - outcome-group-work
  - outcome-twitter-bootstrap
  - outcome-play
  - outcome-cloud-based-hosting
+ - outcome-group-work
 morea_readings:
  - reading-screencast-cloud-based-hosting
  - reading-screencast-version-control-configuration-management

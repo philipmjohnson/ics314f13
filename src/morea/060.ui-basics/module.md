@@ -5,7 +5,6 @@ morea_id: ui-basics
 morea_outcomes:
  - outcome-eclipse-capability
  - outcome-html-css
- - outcome-group-work
 morea_readings:
  - reading-screencast-ui-basics
  - reading-html-resources
