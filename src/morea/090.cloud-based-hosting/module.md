@@ -22,7 +22,16 @@ morea_readings:
  - reading-screencast-torvalds-on-git
  - reading-github-guidelines
 morea_experiences:
+ - experience-github-getting-started-technical-essay
+ - experience-surferpedia-sunday
+ - experience-githubplayresponsivekamanu
+ - experience-play-dropdown-carousel
+ - experience-surferpedia
+ - experience-cloud-based-hosting-technical-essay
 morea_assessments:
+ - assessment-group-wod-surferpedia-monday
+ - assessment-cloud-based-hosting-technical-essay
+ - assessment-paired-wod-surferpedia
 morea_type: module
 morea_icon_url: /morea/090.cloud-based-hosting/logo.jpg
 morea_labels:
