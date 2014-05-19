@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-wod-digitsdelete" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 10 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 10-20 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 20-30 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 30+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Students updated a dynamic web application written in Play to incorporate “Delete” functionality.  The WOD required them to update the model, view, and controller sections of the web app. While the base application code needs to be touched in several places to implement Delete, if you know what you are doing it is possible to implement this quite quickly.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>Performance on this WOD was interesting in that there were no Sd times: either the students finished in less than 20 minutes or they didn’t finish at all.  Also, all of the finishers had a correctly functioning application. Out of the 14 students, there were only 2 DNFs, which is a strong showing from the class.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-wod-digitsdelete',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 5 },
+ { y: 'Av', num: 7 },
+ { y: 'Sd', num: 0 },
+ { y: 'DNF', num: 2 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>

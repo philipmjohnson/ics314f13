@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice WOD: DigitsModel | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-wod-digitsmodel">Practice WOD: DigitsModel</h1>
+
+<p>Just in case I haven’t made myself clear already, prior to doing this WOD, you should have reviewed all the material in the Resources section of this module and watched the screencasts. In particular, you will want to review Chapter 8 of Play with Java on producing output with view templates.</p>
+
+<p>The purpose of this WOD is to introduce you to creating dynamic output and simple model classes. To do that, we will create a data structure containing all of the contacts added by the form, and then print out the contents of that data structure on the home page.  This data structure is a kind of “model” (from the model-view-controller design pattern).</p>
+
+<p>To illustrate, here is what the home page should look like when the application is first retrieved in a browser. Notice that the contacts list is empty:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/digitsmodel-1.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/digitsmodel-1.png" /></a>
+  </div>
+</div>
+
+<p>Now go to the New Contact page, type in a contact, and press Add:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/digitsmodel-2.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/digitsmodel-2.png" /></a>
+  </div>
+</div>
+
+<p>This should add the contact to an in-memory repository.   Clicking on the Home button to return to the home page should display that contact:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/digitsmodel-3.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/digitsmodel-3.png" /></a>
+  </div>
+</div>
+
+<p>To get ready for this WOD, create a new branch off of a successfully completed branch from the DigitsFormValidation WOD. Name this new branch “Attempt-N-N-N-1″, where N-N-N is the branch you’re going to base this WOD on.  For example, if the branch “Attempt-2-2-2″ contains the DigitsFormValidation code base that you want to build this WOD on, then create a branch called “Attempt-2-2-2-1″ to indicate that this is the first attempt (1) to extend the code from “Attempt-2-2-2″ to support models and dynamic output.</p>
+
+<h2 id="instructions">Instructions</h2>
+
+<p>Provide dynamic output and a model for your Digits form data.</p>
+
+<ol>
+  <li>Start your timer.</li>
+  <li>Enable checkstyle.</li>
+  <li>Implement a model for Contact data. Create a new package called “models” and a class called Contact, with private firstName, lastName,and telephone fields and public getters and setters. </li>
+  <li>Implement a simple in-memory repository for Contacts.
+Create a class called ContactDB in the models package. It takes a ContactDataForm, creates a Contact instance from it, and adds it to an internal data structure. It also has a getContacts() method that returns all of the Contacts added so far.</li>
+  <li>Update the Index.scala.html file to dynamically display all Contacts.
+Define List[Contact] as a parameter, and use the @for control structure to loop through them.</li>
+  <li>Update Application.java to interact with the model.
+Upon receipt of a valid Contact from the user, add it to the ContactDB.  When displaying the home page, pass the current list of Contacts.</li>
+  <li>When finished, test your code by adding some contacts.</li>
+  <li>To end the WOD, commit the working code to your branch.</li>
+</ol>
+
+<p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;16 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 16-22 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 22-28 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 28+ min</span>
+</span></p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Once you’ve finished doing the WOD a single time, watch me do it:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/4TRQP1HAJ4A" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="standard-wod-caveats">Standard WOD Caveats</h2>
+
+<p>You’ll learn significantly less from watching me solve the
+WOD if you haven’t attempted the WOD yourself first.</p>
+
+<p>While it’s an achievement to finish the WOD no matter how long it takes, you
+might experience “diminishing returns” if you work longer than the DNF
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.</p>
+
+<p>After watching my solution, I recommend that you repeat the WOD if you
+have not achieved at least Av performance. If so, be sure to:</p>
+
+<ul>
+  <li>Delete your old project so you cannot refer to it;</li>
+  <li>Don’t look at my screencast while you WOD; and</li>
+  <li>Reset your timer.</li>
+</ul>
+
+<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+
+<h2 id="how-to-repeat-the-wod">How to repeat the WOD</h2>
+
+<p>To repeat the WOD, simply switch your local workspace branch to master, then create a new branch off of master called “Attempt-2″ (or whatever attempt you are on). Then, in the play console, type <code>; clean ; compile ; run</code> to  clean the target directory, then recompile the system, then run the web application.</p>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-19 11:46:33 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
