@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-wod-digitshidden" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 7 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 7-14 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 14-21 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 21+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>This was a solo WOD in which the students had to design a scala template to abstract away some raw html code in their view.  The WOD required them to touch just two files in their Digits application.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>This WOD showed more variability than I expected; I had assumed this would be very easy for the class.  The finish time went from 5 minutes for the best finisher to a DNF at 21 minutes.  The percentage DNF continues to fall, although five students have now dropped the class, which may account for the low percentage of DNF.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-wod-digitshidden',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 4 },
+ { y: 'Av', num: 7 },
+ { y: 'Sd', num: 3 },
+ { y: 'DNF', num: 1 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>

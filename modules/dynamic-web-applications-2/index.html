@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Dynamic web applications, Part II | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <h1><small>Module: </small> Dynamic web applications, Part II </h1>
+  <p><p>Become more sophisticated with the Scala template language and more advanced 
+user interaction controls.</p>
+
+</p>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+    <h2>Learning outcomes</h2>
+
+    
+
+    
+      
+      <h3>Create standards compliant Java code</h3>
+      <p>
+        
+      </p>
+      <p>You can implement Java code that complies with Java best practices for coding style.</p>
+
+    
+      
+      <h3>Acquire capability with the Eclipse IDE</h3>
+      <p>
+        
+      </p>
+      <p>You develop capability with the Eclipse IDE that enables you to develop software efficiently and effectively.</p>
+
+    
+      
+      <h3>Write code efficiently</h3>
+      <p>
+        
+      </p>
+      <p>You can implement correctly functioning Java code in a short period of time. </p>
+
+    
+      
+      <h3>Create high quality technical writing</h3>
+      <p>
+        
+      </p>
+      <p>You demonstrate the ability to write professional-quality technical essays or to have significantly 
+improved your skill at this task since your last essay. </p>
+
+    
+      
+      <h3>Design using HTML and CSS</h3>
+      <p>
+        
+      </p>
+      <p>You can use HTML and CSS to design basic web pages, and you can use tools 
+(Eclipse, Chrome Developer Tools, LiveReload) to do this development efficiently.</p>
+
+    
+      
+      <h3>Design using Twitter Bootstrap</h3>
+      <p>
+        
+      </p>
+      <p>You can use Twitter Bootstrap 3 along with HTML and CSS to design modern, responsive, and attractive web pages.</p>
+
+    
+      
+      <h3>Design using Play Framework</h3>
+      <p>
+        
+      </p>
+      <p>You can use the Play Framework to implement web applications.</p>
+
+    
+      
+      <h3>Use cloud-based hosting effectively</h3>
+      <p>
+        
+      </p>
+      <p>You can use git for version control and configuration management, and GitHub as a shared
+repository for software development artifacts. </p>
+
+    
+
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+  <h2>Readings and other resources</h2>
+
+    
+
+    <div class="row">
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="https://www.youtube.com/watch?v=BK31eOWBbTA">Introduction to play-example-form</a></h4>
+            <p>A Play application template showing advanced form controls.</p>
+
+            <p>
+              
+              <span class="badge">Screencast</span>
+              
+              <span class="badge">16 min</span>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="http://www.playframework.com/documentation/2.2.x/ScalaTemplates">Scala templates</a></h4>
+            <p>Play Framework documentation on the Scala template engine</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/reading-scala-template-tips.html">Scala template tips</a></h4>
+            <p>Sample code for common Scala template operations</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+  <h2>Experiential Learning</h2>
+
+    
+
+    <div class="row">
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-warmup-play-example-form.html">Pre-WOD Warmup: play-example-form</a></h4>
+            <p>Get to know the play-example-form system</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-digitstexttemplate.html">Practice WOD: DigitsTextTemplate</a></h4>
+            <p>Refactor your Digits application using Scala templates</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-digitsselection.html">Practice WOD: DigitsSelection</a></h4>
+            <p>Add a pull-down menu to your Digits application.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-digitstelephone.html">Practice WOD: DigitsTelephone</a></h4>
+            <p>Create application-specific Scala templates</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      </div><div class="row">
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-digitsinit.html">Practice WOD: DigitsInit</a></h4>
+            <p>Create initialization code for Play applications.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-dynamic-web-applications-2-technical-essay.html">A19: Dynamic Web Applications, Part II Technical Essay</a></h4>
+            <p>Write a technical essay summarizing your experience doing the dynamic web applications part II practice WODs.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-dynamic-surferpedia.html">A20: Dynamic Surferpedia</a></h4>
+            <p>Consolidate your insights by making Surferpedia dynamic.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/110.dynamic-web-applications-2/experience-dynamic-surferpedia-technical-essay.html">A20: Dynamic Surferpedia Technical Essay</a></h4>
+            <p>Write a technical essay summarizing your experience developing the dynamic surferpedia system.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      </div><div class="row">
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+    <h2>Assessment</h2>
+
+    
+
+    
+      
+      <h3>Group WOD: Digits Radio</h3>
+      <p>
+        
+      </p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-group-wod-digitsradio" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Students worked in groups in-class to collaboratively 
+augment one of their Digits applications with additional functionality.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>All groups accomplished this task.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-group-wod-digitsradio',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 0 },
+ { y: 'Av', num: 2 },
+ { y: 'Sd', num: 4 },
+ { y: 'DNF', num: 0 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
+
+    
+      
+      <h3>Dynamic Web Applications Part II Technical Essay</h3>
+      <p>
+        
+      </p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-dynamic-web-applications-2-technical-essay" style="height: 150px;"></div>
+     </div>
+  </div>
+
+  <div class="col-sm-6">
+    <p>This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the dynamic web applications part II practice WODs.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>All essays were at least satisfactory.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-dynamic-web-applications-2-technical-essay',
+  hideHover: 'auto',
+  data: [{ y: 'Excellent', num: 3 },
+ { y: 'Satisfactory', num: 12  },
+ { y: 'Unsatisfactory', num: 0 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+</div>
+
+    
+      
+      <h3>Individual WOD: DigitsHidden</h3>
+      <p>
+        
+      </p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-wod-digitshidden" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 7 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 7-14 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 14-21 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 21+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>This was a solo WOD in which the students had to design a scala template to abstract away some raw html code in their view.  The WOD required them to touch just two files in their Digits application.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>This WOD showed more variability than I expected; I had assumed this would be very easy for the class.  The finish time went from 5 minutes for the best finisher to a DNF at 21 minutes.  The percentage DNF continues to fall, although five students have now dropped the class, which may account for the low percentage of DNF.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-wod-digitshidden',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 4 },
+ { y: 'Av', num: 7 },
+ { y: 'Sd', num: 3 },
+ { y: 'DNF', num: 1 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
+
+    
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-19 13:52:41 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

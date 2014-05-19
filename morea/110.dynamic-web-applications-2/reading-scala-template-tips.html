@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Scala template tips | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="scala-template-tips">Scala template tips</h1>
+
+<p>Writing scala templates can be tricky, so here are a few examples of template code to help you understand how things work.</p>
+
+<h2 id="simple-iteration">Simple Iteration</h2>
+
+<p>The following code:</p>
+
+<pre><code>@for(index &lt;- 0 to 5) {
+   &lt;p&gt;@index&lt;/p&gt;
+}
+</code></pre>
+
+<p>produces:</p>
+
+<pre><code>&lt;p&gt;0&lt;/p&gt;
+
+&lt;p&gt;1&lt;/p&gt;
+
+&lt;p&gt;2&lt;/p&gt;
+
+&lt;p&gt;3&lt;/p&gt;
+
+&lt;p&gt;4&lt;/p&gt;
+
+&lt;p&gt;5&lt;/p&gt;
+</code></pre>
+
+<p>You can eliminate the extra newline by moving the closing brace.</p>
+
+<p>The following code:</p>
+
+<pre><code>@for(index &lt;- 0 to 5) {
+   &lt;p&gt;@index&lt;/p&gt;}
+</code></pre>
+
+<p>produces</p>
+
+<pre><code>&lt;p&gt;0&lt;/p&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;p&gt;3&lt;/p&gt;
+&lt;p&gt;4&lt;/p&gt;
+&lt;p&gt;5&lt;/p&gt;
+</code></pre>
+
+<p>Warning: the open curly brace must occur on the first line, otherwise the template compiler will not understand where to end the @-expression.</p>
+
+<h2 id="conditional">Conditional</h2>
+
+<p>Let’s say you wanted to do something different the first time through the loop.</p>
+
+<p>The following code:</p>
+
+<pre><code>@for(index &lt;- 0 to 5) {
+   &lt;p&gt;@if(index == 0) {Fizz} else {@index}&lt;/p&gt;}
+</code></pre>
+
+<p>produces:</p>
+
+<pre><code>&lt;p&gt;Fizz&lt;/p&gt;
+&lt;p&gt;1&lt;/p&gt;
+&lt;p&gt;2&lt;/p&gt;
+&lt;p&gt;3&lt;/p&gt;
+&lt;p&gt;4&lt;/p&gt;
+&lt;p&gt;5&lt;/p&gt;
+</code></pre>
+
+<p>NOTE: Newlines are significant for If-then-else clauses!</p>
+
+<p>The “} else {“ must all appear on the same line.</p>
+
+<p>So, this is OK:</p>
+
+<pre><code>@if(isLoggedIn) {
+  &lt;li&gt;&lt;a href="@routes.Application.profile()"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+} else {
+  &lt;li&gt;&lt;a href="@routes.Application.index()"&gt;Home&lt;/a&gt;&lt;/li&gt;
+}
+</code></pre>
+
+<p>But this will not be parsed correctly:</p>
+
+<pre><code>@if(isLoggedIn) {
+  &lt;li&gt;&lt;a href="@routes.Application.profile()"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+}
+else {
+  &lt;li&gt;&lt;a href="@routes.Application.index()"&gt;Home&lt;/a&gt;&lt;/li&gt;
+}
+</code></pre>
+
+<h2 id="lists">Lists</h2>
+
+<p>If you pass a List[String] to a template, you can iterate through it. Say you declare the following parameter on the first line of your template file:</p>
+
+<pre><code>@(surferNames: List[String])
+</code></pre>
+
+<p>Then the following code:</p>
+
+<pre><code>@for(name &lt;- surferNames) {
+   &lt;p&gt;@name&lt;/p&gt;}
+</code></pre>
+
+<p>might produce:</p>
+
+<pre><code>&lt;p&gt;Eddie Aikau&lt;/p&gt;
+&lt;p&gt;Pauline Menczer&lt;/p&gt;
+</code></pre>
+
+<h2 id="getting-the-index">Getting the index</h2>
+
+<p>If you need to know how many times you’ve gone through a loop, use zipWithIndex:</p>
+
+<pre><code>@for((name, index) &lt;- surferNames.zipWithIndex) {
+   &lt;p&gt;@index, @name&lt;/p&gt;}
+</code></pre>
+
+<p>might produce:</p>
+
+<pre><code>&lt;p&gt;1, Eddie Aikau&lt;/p&gt;
+&lt;p&gt;2, Pauline Menczer&lt;/p&gt;
+</code></pre>
+
+<h2 id="maps">Maps</h2>
+
+<p>Maps work just like lists. Say you declare the following parameter on the first line of your template file:</p>
+
+<p>@(namesAndTowns: Map[String, String])</p>
+
+<p>Then the following code:</p>
+
+<pre><code>@for((name, town) &lt;- namesAndTowns) {
+   &lt;p&gt;@name, @town&lt;/p&gt;}
+</code></pre>
+
+<p>might produce:</p>
+
+<pre><code>&lt;p&gt;Eddie Aikau, Haleiwa, HI&lt;/p&gt;
+&lt;p&gt;Pauline Menczer, Brisbane, Australia&lt;/p&gt;
+</code></pre>
+
+<h2 id="maps-with-indexes">Maps with indexes</h2>
+
+<p>Use the same trick as with lists:</p>
+
+<pre><code>@for(((name, town), index) &lt;- namesAndTowns.zipWithIndex) {
+   &lt;p&gt;@index, @name, @town&lt;/p&gt;}
+</code></pre>
+
+<p>might produce:</p>
+
+<pre><code>&lt;p&gt;1, Eddie Aikau, Haleiwa, HI&lt;/p&gt;
+&lt;p&gt;2, Pauline Menczer, Brisbane, Australia&lt;/p&gt;
+</code></pre>
+
+<h2 id="field-instances">Field instances</h2>
+
+<p>Let’s say you create a PersonData class, with fields “name” and “address”. Then you pass to your template a Form based upon that person:</p>
+
+<pre><code>@(PersonForm : Form[PersonData])
+</code></pre>
+
+<p>You can access the “name” field with PersonForm(“name”), but what you get is an instance of the Field class, not the actual name field from PersonData. This Field instance is supposed to represent a form field, so you can extract values from it as follows:</p>
+
+<pre><code>PersonForm("name").name
+PersonForm("name").id
+PersonForm("name").value
+</code></pre>
+
+<p>If you want, you can set a default value for the value as follows:</p>
+
+<pre><code>PersonForm("name").value.getOrElse("")
+</code></pre>
+
+<p>Finally, to test the value of a form field, you have to use the Scala “Some” construct:</p>
+
+<pre><code>@if(field("label").value == Some("Personal")) {
+  &lt;h3&gt;TRUE&lt;/h3&gt; } else {
+  &lt;h3&gt;FALSE&lt;/h3&gt;
+}
+</code></pre>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-19 13:52:41 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

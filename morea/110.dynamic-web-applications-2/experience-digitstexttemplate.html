@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice WOD: DigitsTextTemplate | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-wod-digitstexttemplate">Practice WOD: DigitsTextTemplate</h1>
+
+<p>The goal of this WOD is to refactor your Digits form template using the scala templates in play-example-form.</p>
+
+<p>Create a new branch off of your latest digits application from the last module. Name this new branch “DigitsTextTemplate-1″, indicating that this is the first attempt at the DigitsTextTemplate WOD.</p>
+
+<h2 id="instructions">Instructions</h2>
+
+<p>Create a revised version of your Digits application in which you use the @text Scala template from the <a href="https://github.com/ics-software-engineering/play-example-form">play-example-form</a> system. </p>
+
+<ol>
+  <li>Start your timer.</li>
+  <li>Enable checkstyle.</li>
+  <li>Create a views.bootstrap3 package.</li>
+  <li>Copy the text.scala.html file into this package.</li>
+  <li>Edit your NewContact.scala.html template to import this package, and replace the nested div’s for each form group by the @text template.</li>
+  <li>Test your code by submitting correct and incorrect forms to ensure the behavior remains the same. </li>
+  <li>To end the WOD, commit the working code to your branch.</li>
+</ol>
+
+<p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;8 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 8-12 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 12-16 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 16+ min</span>
+</span></p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Once you’ve finished doing the WOD a single time, watch me do it:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/irBUErRo2Co" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="standard-wod-caveats">Standard WOD Caveats</h2>
+
+<p>You’ll learn significantly less from watching me solve the
+WOD if you haven’t attempted the WOD yourself first.</p>
+
+<p>While it’s an achievement to finish the WOD no matter how long it takes, you
+might experience “diminishing returns” if you work longer than the DNF
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.</p>
+
+<p>After watching my solution, I recommend that you repeat the WOD if you
+have not achieved at least Av performance. If so, be sure to:</p>
+
+<ul>
+  <li>Delete your old project so you cannot refer to it;</li>
+  <li>Don’t look at my screencast while you WOD; and</li>
+  <li>Reset your timer.</li>
+</ul>
+
+<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+
+<h2 id="how-to-repeat-the-wod">How to repeat the WOD</h2>
+
+<p>To repeat the WOD, simply switch your local workspace branch to master, then create a new branch off of master called “Attempt-2″ (or whatever attempt you are on). Then, in the play console, type <code>; clean ; compile ; run</code> to  clean the target directory, then recompile the system, then run the web application.</p>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-19 13:52:41 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

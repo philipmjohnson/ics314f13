@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> A20: Dynamic Surferpedia | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="a20-dynamic-surferpedia">A20: Dynamic Surferpedia</h1>
+
+<h2 id="functional-requirements">Functional Requirements</h2>
+
+<p>For this assignment, you must convert your “static” Surferpedia web application into a “dynamic” one.  This involves the following basic functionality:</p>
+
+<ul>
+  <li>Model: There is a model, consisting of a Surfer class and a SurferDB class that will hold in-memory instances of Surfers.</li>
+  <li>Create: You can create new Surfers and add them to the web application by filling out a form.</li>
+  <li>Read: You can show data about an existing surfer by selecting their name in one of the pull-down menus.</li>
+  <li>Update: You can edit and save updated information about a given surfer.</li>
+  <li>Delete: You can remove surfers from the system.</li>
+  <li>Dynamic view: The menu items and the carousel images on the home page are generated dynamically by querying the model classes for the current data.</li>
+  <li>Initialization: For convenience, you should initialize your Model on system startup with three Surfer instances (one Male, one Female, and one Grom).  Use the Global class’s onStart method to initialize the SurferDB class.</li>
+</ul>
+
+<h2 id="process">Process</h2>
+
+<p>Begin by creating a branch of your static Surferpedia GitHub repository called “dynamic”.  Do all of your conversion work in this branch.   This enables you to easily backtrack to your static version if you need to (by simply switching to the Main branch).</p>
+
+<p>I suggest you first implement the Model, then implement the Create capability, then Read, then Update, then Delete.   Pretty early on, you will want to implement automatic initialization of three surfers, since that will speed up development. Deal with the Home page last, after you have individual surfer actions working.</p>
+
+<p>Note that you should work with one other person on this project (see below). Of course, you can always post questions to the class discussion list.</p>
+
+<p>While doing this assignment, I found that I needed to create a controller method that passed more than 7 parameters, which violated a checkstyle warning.  Upon reflection, I do not believe this is a useful checkstyle check, so I deleted it from the Checkstyle configuration file.  You can feel free to download and install this revised checkstyle.xml file following the class instructions.</p>
+
+<h2 id="collaboration">Collaboration</h2>
+
+<p>I have assigned everyone a partner for this project, see this spreadsheet for the assignment.   You must collaborate with your partner at least twice for one hour each time, but you can collaborate much more than that if you want.  Collaboration can take many forms:</p>
+
+<ul>
+  <li>Two one hour face to face meetings.</li>
+  <li>Two one hour google hangouts to work on specific issues.</li>
+  <li>“Office hours”: times every night when you and your partner agree to join a google hangout to answer questions as they come up.</li>
+</ul>
+
+<p>You can and should jointly develop code and look at each other’s sources, but you cannot share files:  all of the code in your repository must have been typed in by you.</p>
+
+<p>A great use of your partner is to ask them to test your system to see if it satisfies one or more of functional requirements.</p>
+
+<p>There is one group of three: you folks must collaborate for a total of two hours each and can decide for yourselves how to enable each of you to collaborate with one or both of the others for a minimum of two hours.</p>
+
+<p>Feel free to collaborate with others in the class, but you must collaborate with your assigned partner at least twice for one hour each time.</p>
+
+<p>In your technical essay about this assignment, you will discuss when and how you collaborated with your partner and how effective that collaboration was.</p>
+
+<h2 id="user-interface">User Interface</h2>
+
+<p>To make the requirements more concrete, here are some user interface snapshots illustrating your target functionality.</p>
+
+<h3 id="home-page">Home Page</h3>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-home.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-home.png" /></a>
+  </div>
+</div>
+
+<p>The home page is not much different from before, although the implementation is dynamic: both the contents of the drop-down menu items, as well as the carousel images, are determined by queries to the Model classes. There is also a “New” navbar item which enables you to add a new Surfer to the system.</p>
+
+<h3 id="show-surfer">Show Surfer</h3>
+
+<p>Selecting a surfer from the navbar brings up a pages providing details on the surfer, such as this one: </p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-surfer.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-surfer.png" /></a>
+  </div>
+</div>
+
+<p>First, you can see that the picture on this page can be different from the picture on the home page.  This enables you to provide a “landscape” style action photo for the home page and a “portrait” style headshot for this page, addressing some of the formatting issues you may have encountered previously.</p>
+
+<p>Second, the bio statement has structure: there are fields for the surfer’s name, home, awards, and bio paragraph.</p>
+
+<p>Third, there are two links on this page: one to bring up a form to edit the data associated with this surfer, and one to delete the surfer.</p>
+
+<p>Fourth, notice the URL used to retrieve this surfer: http://localhost:9000/surfer/eddieaikau. In this system, each surfer is defined with a unique “slug”, which is a string that can be used to retrieve that surfer via an URL.</p>
+
+<h3 id="edit-surfer">Edit Surfer</h3>
+
+<p>Clicking on the edit link from the last image brings up a form that is pre-filled with the existing data about the surfer: </p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-edit.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-edit.png" /></a>
+  </div>
+</div>
+
+<p>This is a relatively standard form.   Note that there is help text associated with each form control. Pictures are provided to the system via URLs.  This avoids the need to do a file upload into the images directory.  The only file required for the images directory is the header image. Note that the URL to retrieve this page is http://localhost:9000/surfer/eddieaikau/edit.</p>
+
+<p>Also note that the “Slug” field is read-only.   You can only provide a slug for a surfer once, when that surfer is created.   When editing the data associated with an existing surfer, the slug field is displayed for reference purposes, but you cannot change its value.</p>
+
+<p>The type field is a pull-down menu allowing you to select “Male”, “Female”, or “Grom”.  This value is used to determine which pull-down menu the surfer appears in.   You can edit this value (for example, when a “Grom” grows up and becomes a “Male” or “Female”).</p>
+
+<h3 id="new-surfer">New Surfer</h3>
+
+<p>Pressing the “New” link on the navbar brings up the following form for defining a new surfer: </p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-new.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/dyn-surferpedia-new.png" /></a>
+  </div>
+</div>
+
+<p>This is a pretty typical form.  For validation:</p>
+
+<ul>
+  <li>Name must be non-empty.</li>
+  <li>Home must be non-empty.</li>
+  <li>Awards is optional. It can be empty.</li>
+  <li>Carousel URL must be non-empty.</li>
+  <li>Bio URL must be non-empty.</li>
+  <li>Bio must be non-empty.</li>
+  <li>Slug must be only letters and digits, and must be unique (i.e. it cannot match any currently defined slug).</li>
+  <li>Type must be either “Male”, “Female”, or “Grom”.</li>
+</ul>
+
+<p>Submitting an invalid form should provide useful feedback. For example, submitting the form without providing any data should result in something like the following: </p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/dyn-surfer-edit-validate-2.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/dyn-surfer-edit-validate-2.png" /></a>
+  </div>
+</div>
+
+<h2 id="hints">Hints</h2>
+
+<p>To do this assignment, you are essentially blending together the knowledge you have gained from the Digits application with the more interesting content and presentation you designed for the Surferpedia system.  You may also want to look at the the play-example-form system for more inspiration.</p>
+
+<h3 id="files">Files</h3>
+
+<p>Here is a snapshot showing you the file layout for my implementation:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/package-explorer-2.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/package-explorer-2.png" /></a>
+  </div>
+</div>
+
+<p>This snapshot should be interesting to you as much for the files that are present as well as for the files that are absent. Of particular interest might be the following:</p>
+
+<ul>
+  <li>There are only four views (Index, Main, ManageSurfer, and ShowSurfer) to handle any number of surfers.</li>
+  <li>The public/images directory contains only the header.jpg file.</li>
+  <li>I created a custom scala template in the bootstrap3 directory called slug.scala.html which made it easy to make the slug form control readonly when editing an existing surfer’s data.</li>
+  <li>There is a package.html file in the same directory as Global.java, which avoids a checkstyle warning.</li>
+</ul>
+
+<h3 id="routes">Routes</h3>
+
+<p>Here’s  my routes file:</p>
+
+<pre><code># Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+ 
+# Home page
+GET     /                           controllers.Application.index()
+GET     /new                        controllers.Application.newSurfer()
+GET     /surfer/:slug               controllers.Application.getSurfer(slug)
+GET     /surfer/:slug/delete        controllers.Application.deleteSurfer(slug)
+GET     /surfer/:slug/edit          controllers.Application.manageSurfer(slug)
+POST    /post                       controllers.Application.postSurfer()
+ 
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+</code></pre>
+
+<p>If you like, you can simply use this as the contents of your routes file in order to set up the controllers appropriately.</p>
+
+<h3 id="css">CSS</h3>
+
+<p>In the static version of this system, you defined CSS classes for each surfer. Unfortunately, CSS is static: you cannot (without Javascript wizardry) dynamically define new CSS classes at run-time.  To provide a simple implementation, recognize that the old static classes consisted of truly static, unchanging properties (height), along with a single changing property (background-image).  The way to make things dynamic is to realize that you can provide a “style” property in any &lt;div&gt; with CSS properties and values.   So, you can combine a static CSS class in a div along with a little bit of dynamic values:</p>
+
+<pre><code>&lt;div class="carousel-image" style="background-image: url('@url');"&gt;&lt;/div&gt;
+</code></pre>
+
+<h3 id="the-carousel">The Carousel</h3>
+
+<p>Getting the carousel to work requires a little thought, because you have two places (the carousel-indicators and the carousel items) where the first, and only the first entry should have the “active” class associated with it.</p>
+
+<p>This takes a little bit of thought to implement using Scala templates.  You might want to look at the Scala Template Tricks page.</p>
+
+<p>I also discovered that you can attach the property data-ride=”carousel” to the &lt;div&gt; containing class=”carousel slide” in order to get the carousel to automatically start sliding upon retrieval.  This is not documented in the bootstrap carousel documentation (but should be!)</p>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-19 13:52:41 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
