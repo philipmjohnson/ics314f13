@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice WOD: DeploySurferpedia | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-wod-deploysurferpedia">Practice WOD: DeploySurferpedia</h1>
+
+<p>The goal for this WOD is for you to be able to deploy your Surferpedia application to the cloud.</p>
+
+<p>In contrast to other WODs, I do not believe it is useful for you to try to do this WOD on your own before watching my solution.  Instead, watch my solution first, then try it yourself:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/UUo9QPqVGeE" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<p>As you can see from watching the screencast, there is the possibility of intermittent errors at CloudBees.  I raised a StackOverflow issue and you can check it to see if the CloudBees staff has posted a solution.  One hypothesis is that a work-around is to disable “delta” uploads on deployment, which you can do with the –delta keyword. Here’s an example:</p>
+
+<pre><code>% bees app:deploy --delta false -a philipmjohnson/myfirstplayapp -t play2 target/universal/surferpedia-1.0-SNAPSHOT.zip
+</code></pre>
+
+<h2 id="instructions">Instructions</h2>
+
+<ol>
+  <li>Start your timer.</li>
+  <li>Deploy your Surferpedia application to the cloud.</li>
+</ol>
+
+<p>If successful, http://surferpedia.philipmjohnson.cloudbees.net/ (where philipmjohnson is replaced by your CloudBees username) will point to your surferpedia application.</p>
+
+<p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;5 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 5-10 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 10-15 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 15+ min</span>
+</span></p>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-20 09:46:56 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

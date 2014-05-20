@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-group-wod-surferpediaupdates" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Students worked in groups in-class to extend the Surferpedia application with a listing of updates
+and deploy the results to CloudBees</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>All groups were able to implement the enhancement.</li>
+  <li>Two groups failed to deploy to CloudBees.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-group-wod-surferpediaupdates',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 0 },
+ { y: 'Av', num: 2 },
+ { y: 'Sd', num: 2 },
+ { y: 'DNF', num: 2 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>

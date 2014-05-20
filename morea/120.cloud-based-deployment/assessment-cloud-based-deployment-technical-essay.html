@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-cloud-based-deployment-technical-essay" style="height: 150px;"></div>
+     </div>
+  </div>
+
+  <div class="col-sm-6">
+    <p>This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Cloud-based Deployment practice WODs.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>This week I took points off if the blog post was little more than “I did the assignment in this amount of time.”   Those kind of postings are simply “homework assignment turn-ins”, not actual technical writings that would be of interest to others.  </li>
+  <li>I know you might have the feeling that the “real work” is doing the assignment, and the blog post is just a silly thing added on to the end, but in the long run, your blog posts are going to count as much or more toward your reputation as your ability to add a checkbox into a form.   Some of you are actually taking the time to think through the implications of what you’re doing in class, while others do not appear to be taking the effort.   </li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-cloud-based-deployment-technical-essay',
+  hideHover: 'auto',
+  data: [{ y: 'Excellent', num: 2 },
+ { y: 'Satisfactory', num: 7  },
+ { y: 'Unsatisfactory', num: 5 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+</div>
