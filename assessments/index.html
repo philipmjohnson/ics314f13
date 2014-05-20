@@ -1705,6 +1705,68 @@ Morris.Bar({
   </div>
 </div>
 
+<div class="section-background-1">
+  <div class="container">
+    <h2><small>Module:</small> <a href="/ics314f13/modules/startup-weekend/index.html">Startup Weekend</a></h2>
+
+    
+
+    
+      
+      <h3>Startup Weekend</h3>
+      <p>
+        
+      </p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-startup-weekend" style="height: 150px;"></div>
+     </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>This assessment shows what percentage of students in this class signed up, paid for, and attended Startup Weekend.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>50% of the students elected to do the Startup Weekend, which I view as an extremely positive outcome. Event 
+organizers said this was the most ICS students who ever participated in a Startup Weekend.</li>
+  <li>One team consisting primarily of students in this class won the <a href="http://scotthonda.files.wordpress.com/2013/11/1441508_211096379061935_531186613_n-1.jpg">“Most likely to succeed” award</a>.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-startup-weekend',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Partipants', num: 8},
+ { y: 'Non-participants', num: 8 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
+
+    
+  </div>
+</div>
+
 
 
 
@@ -1718,7 +1780,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-05-20 09:46:56 -1000</span></p>
+       Last update on: <span>2014-05-20 10:16:43 -1000</span></p>
   </div>
 </footer>
 </div>
