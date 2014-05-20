@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-authentication-technical-essay" style="height: 150px;"></div>
+     </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Authorization and Authentication practice WODs.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>All students did acceptably well on this essay.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-authentication-technical-essay',
+  hideHover: 'auto',
+  data: [{ y: 'Satisfactory', num: 15  },
+ { y: 'Unsatisfactory', num: 0 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+</div>

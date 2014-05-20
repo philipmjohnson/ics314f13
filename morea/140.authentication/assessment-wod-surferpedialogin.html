@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-wod-surferpedialogin" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 30 min</span>
+        <span style="padding: 2px" class="label label-info">Av: 30-45 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: 45-60 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>This was a fairly complicated WOD that required the students to add authorization and authentication to their Surferpedia system.  It required changes to around 14 files and about 300 added lines of code.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>This turned out to be a (relatively) hard WOD; four students DNF’d.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-wod-surferpedialogin',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 3 },
+ { y: 'Av', num: 5 },
+ { y: 'Sd', num: 3 },
+ { y: 'DNF', num: 4 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>

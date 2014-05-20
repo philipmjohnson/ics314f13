@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice WOD: DigitsCloudAuthentication | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-wod-digitscloudauthentication">Practice WOD: DigitsCloudAuthentication</h1>
+
+<p>One important issue with authentication is keeping credentials private.   For example, in the previous WODs for this module, you have put the user name and password for authorized users directly into the source code, and committed that code to GitHub.  This strategy is obviously unusable for real world applications.</p>
+
+<p>The goal of this WOD is for you to learn how to use environment variables to avoid putting authentication credentials into source code.  This can be used for both developing your application locally and deploying it to the cloud.   The goal is to provide the admin email and password in environment variables which the application uses to initialize the model.  If those environment variables are not found on startup, the application should indicate this immediately:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/10/digits-admin-undefined.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/10/digits-admin-undefined.png" /></a>
+  </div>
+</div>
+
+<p>The online references for this process include:</p>
+
+<ul>
+  <li><a href="http://www.playframework.com/documentation/2.0.1/ProductionConfiguration">Play framework documentation on configuration variables</a></li>
+  <li><a href="https://wiki.cloudbees.com/bin/view/RUN/Playframework#HConfigurationVariablesandPlay">CloudBees documentation on configuration variables in Play</a></li>
+</ul>
+
+<p>It’s worth trying to solve this yourself for a few minutes before watching the solution.</p>
+
+<h2 id="instructions">Instructions</h2>
+
+<p>Support Create, Read, and Update for your digits application.  You have already implemented Create and Read, so this WOD simply requires you to modify the existing code to support Update. Follow the approach described in the screencast of using an ID field to distinguish between new and pre-existing instances.  </p>
+
+<ol>
+  <li>Start your timer.</li>
+  <li>Create a branch of your digits system called cloudauthentication-1.</li>
+  <li>Do a “; clean ; compile ; run” and check localhost:9000 to make sure you are starting with a running system.</li>
+  <li>Enable checkstyle.</li>
+  <li>Add a small change to a file, then push this commit to GitHub with the message “Starting WOD”. </li>
+  <li>Define two environment variables to hold the admin email and password.</li>
+  <li>Update application.conf to set two configuration properties from the environment variables.</li>
+  <li>Update UserInfoDB with a static method to define admin credentials, as well as a static predicate that indicates whether or not admin credentials have been defined.</li>
+  <li>Update Global to read the configuration properties on startup, and update the model with the administrator credentials (if they exist).</li>
+  <li>Update Login.scala.html to display an alert if the admin credentials are not available within the application.</li>
+  <li>Test your system locally.</li>
+  <li>Once the system works locally, deploy your digits application to CloudBees. Verify that your alert is displayed (since no admin credentials exist on CloudBees).</li>
+  <li>Use the bees config:set command to define the two admin credentials.</li>
+  <li>Restart the application (using bees app:restart).  Verify that you can now login to the cloudbees app using your newly defined credentials.</li>
+  <li>When you have verified that it’s working, push your enhanced code to your branch on GitHub with the message “Finished WOD”.  The difference between the timestamps associated with the two commits represent your WOD time, and the code diffs represent your implementation.</li>
+</ol>
+
+<p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt;26 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 26-40 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 40-50 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 50+ min</span>
+</span></p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Once you’ve finished doing the WOD a single time, watch me do it:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/PL1PYTW1LnA" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="standard-wod-caveats">Standard WOD Caveats</h2>
+
+<p>You’ll learn significantly less from watching me solve the
+WOD if you haven’t attempted the WOD yourself first.</p>
+
+<p>While it’s an achievement to finish the WOD no matter how long it takes, you
+might experience “diminishing returns” if you work longer than the DNF
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.</p>
+
+<p>After watching my solution, I recommend that you repeat the WOD if you
+have not achieved at least Av performance. If so, be sure to:</p>
+
+<ul>
+  <li>Delete your old project so you cannot refer to it;</li>
+  <li>Don’t look at my screencast while you WOD; and</li>
+  <li>Reset your timer.</li>
+</ul>
+
+<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+
+<h2 id="how-to-repeat-the-wod">How to repeat the WOD</h2>
+
+<p>To repeat the WOD, simply switch your local workspace branch to master, then create a new branch off of master called “Attempt-2″ (or whatever attempt you are on). Then, in the play console, type <code>; clean ; compile ; run</code> to  clean the target directory, then recompile the system, then run the web application.</p>
+
+<p>When you’ve finished doing this WOD as many times as you need, you might want to merge your changes into the master branch so that they are easily available for future WODs.</p>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-20 11:38:47 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
