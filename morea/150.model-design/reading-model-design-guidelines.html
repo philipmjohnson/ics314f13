@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Model design guidelines | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="model-design-guidelines">Model design guidelines</h1>
+
+<h2 id="use-lucid-chart-to-document-your-model-design">Use Lucid Chart to document your model design</h2>
+
+<p>The “model design” consists of the entities and relationships between them.</p>
+
+<p><a href="https://www.lucidchart.com/">LucidChart</a> is a free plugin for Google Docs.   Once installed, you can click on the “More Shapes” button, then check “Entity Relationships” to enable: (a) special Entity boxes, and (b) new line ending shapes corresponding to Crow’s Foot relationship diagrams.</p>
+
+<p>Generally, a very simple ER diagram just showing the entities and relationships is enough to establish how the Java model classes will look.   For example:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/11/sample-erd.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/11/sample-erd.png" /></a>
+  </div>
+</div>
+
+<h2 id="use-crows-foot-notation">Use crow’s foot notation</h2>
+
+<p>There are many different ways to represent the relationships between entities. For this class, please use crow’s foot notation (which, conveniently, is what Lucid Charts provides).</p>
+
+<p>Crow’s foot notation consists of a pair of icons at each end of a line.   The “outer” icon represents the “maximum” value, and the “inner” icon represents the “minimum” value:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/11/screen-shot-2013-11-07-at-8-47-37-am.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/11/screen-shot-2013-11-07-at-8-47-37-am.png" /></a>
+  </div>
+</div>
+
+<p>This indicates that a specific garden instance can have zero or more plant species in it (because some gardens might be “brand new” and consist only of dirt).  However, every instance of a plant species (for example, Digitalis Purpurea) is associated with at least one garden (i.e. we don’t create a plant species in the database unless there’s a garden instance that uses it).</p>
+
+<p>Note that Lucid Charts also provides a one-to-one and one-to-many relationship notation that does not specify the minimum cardinality:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/11/bad-crows-feet4.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/11/bad-crows-feet4.png" /></a>
+  </div>
+</div>
+
+<p>Do not use the above notations in your diagrams! Instead, use the notations that include the minimum cardinalities as well, as this provides more information to the reader:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/11/good-crows-feet5.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/11/good-crows-feet5.png" /></a>
+  </div>
+</div>
+
+<p>Now you can see that a Prescription instance cannot exist without being associated with a Person instance, but a Person instance can exist without any associated Prescription instances.</p>
+
+<h2 id="heuristics-for-entity-identification">Heuristics for entity identification</h2>
+
+<p>Entities should be:</p>
+
+<ul>
+  <li>Unique for a particular model design.  Consolidate duplicate entity types found during design.</li>
+  <li>A singular noun (i.e. “Patient”, not “Patients”)</li>
+  <li>Necessary in order to answer at least one of the queries to be asked of the model.</li>
+</ul>
+
+<p>Entities should not:</p>
+
+<ul>
+  <li>Be the name of an individual object (i.e. “University of Hawaii at Manoa”)</li>
+  <li>Express more than one concept (i.e. “equipment/bed”)</li>
+</ul>
+
+<h2 id="heuristics-for-relationship-identification">Heuristics for relationship identification</h2>
+
+<h3 id="one-to-one-relationships">One to one relationships</h3>
+
+<p>The major issue you will have with one-to-one relationships is whether to actually specify the relationship at all, or else simply provide the data as fields within the entity instance. For example, consider an entity type Person where each Person instance has an address consisting of a street, city, state, and zip code.  Should you specify the address data as fields in the Person entity, or should you create a separate Address entity type?</p>
+
+<p>There is no single answer to this question: the right choice depends upon how you intend to use the data.  For example, it would be better to specify the Address as its own entity type if:</p>
+
+<ul>
+  <li>It is possible for multiple people to share the same address. Note that in this case, you will not only want Address to be its own Entity type, but the relationship is now one-to-many (a single Address instance can be associated with many Person instances.)</li>
+  <li>You will want to perform queries over the data in the Address field. For example, if you want to find out all the Person instances in a certain zip code, then you might want to have Address (and perhaps Zip Code) as their own entity types. (It is still possible to implement that query without separate Entities, but it might be less efficient.)</li>
+</ul>
+
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-21 09:22:05 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
