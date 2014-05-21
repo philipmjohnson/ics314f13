@@ -10,6 +10,7 @@ morea_outcomes:
  - outcome-play
  - outcome-cloud-based-hosting
  - outcome-cloud-based-deployment
+ - outcome-group-work
 morea_readings:
  - reading-startup-weekend
 morea_experiences:
