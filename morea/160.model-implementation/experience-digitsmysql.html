@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Practice WOD: DigitsMySQL | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="practice-wod-digitsmysql">Practice WOD: DigitsMySQL</h1>
+
+<p>Before starting these WODs, you should have successfully finished the play-example-mysql experience.   Finishing this assignment means that you will have successfully set up MySQL on your computer, and installed and run a Play application that reads and writes data from that database. You will have also successfully deployed that application to CloudBees and set up its MySQL back-end.</p>
+
+<p>The goal of this WOD is to start learning how to implement back-end persistence for your web applications using MySQL and EBean.</p>
+
+<p>Before starting this WOD, you should set up your environment for running a recent version of your Digits application.  This version should be committed to the master branch and should support multiple users.</p>
+
+<p>You should also have a local copy of play-example-mysql in Eclipse for reference.</p>
+
+<h2 id="instructions">Instructions</h2>
+
+<ol>
+  <li>Start your timer.</li>
+  <li>Create branch mysql-1. Create a branch off your master called “mysql-1″ to hold all of the work associated with this WOD. If this is not the first time you’re doing the WOD, increment the number as necessary.</li>
+  <li>Create ERD.  Create a Lucid Chart showing the entities, relationships, and fields to be implemented in your Digits application.</li>
+  <li>Enhance project files for MySQL.  Compare build.sbt, application.conf in play-example-mysql to the digits project versions, and update as necessary for MySQL.</li>
+  <li>Fix the Digits system to use -1 as the new Contact sentinel value, not 0.  In MySQL, ids can start with 0, so using 0 as the value to indicate a new Contact will lead to bugs.  Update the system to use -1 as the sentinel value.  Check Application.java, ContactDB.java, ContactFormData.java, and routes.</li>
+  <li>Annotate entity classes.  Remember to extend Model, add @Entity, add SerialVersionUID, add @Id, and add bidirectional relationship annotations.  Add a find() method to simplify access to the EBean query language. Add getters and setters as needed.</li>
+  <li>Update ContactDB and UserInfoDB to use MySQL.  Now edit the database classes to store and retrieve entities from MySQL, not from the in-memory structures.</li>
+  <li>Update Global.java to implement admin.  Note that we now have to check to see if the Admin contacts have been already created on startup to prevent them from being created multiple times.</li>
+  <li>Setup new digits database.  Create a new database called “digits” in your local MySQL server.  Edit your environment variable to refer to it.</li>
+  <li>Run system, and debug any errors that occur.  It is very helpful to monitor the contents of your MySQL database tables to better understand what your Play code is doing (or not doing).</li>
+  <li>Commit your changes.   When you have it working, commit your changes. Use “Finished WOD.” as the commit message.</li>
+</ol>
+
+<p>When finished, stop your timer, and record how many minutes it took you to complete the WOD. </p>
+
+<p><span class="h4">
+  <span style="padding: 2px" class="label label-success">Rx: &lt; 60 min</span>
+  <span style="padding: 2px" class="label label-info">Av: 60-75 min</span>
+  <span style="padding: 2px" class="label label-warning">Sd: 75-90 min</span>
+  <span style="padding: 2px" class="label label-danger">DNF: 90+ min</span>
+</span></p>
+
+<h2 id="demonstration">Demonstration</h2>
+
+<p>Once you’ve finished doing the WOD a single time, watch me do it:</p>
+
+<div class="video-container">
+  <iframe src="http://www.youtube.com/embed/5Twrvt7uN4o" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h2 id="standard-wod-caveats">Standard WOD Caveats</h2>
+
+<p>You’ll learn significantly less from watching me solve the
+WOD if you haven’t attempted the WOD yourself first.</p>
+
+<p>While it’s an achievement to finish the WOD no matter how long it takes, you
+might experience “diminishing returns” if you work longer than the DNF
+time. Thus, it might be strategic to stop working at the DNF time and watch
+my solution.</p>
+
+<p>After watching my solution, I recommend that you repeat the WOD if you
+have not achieved at least Av performance. If so, be sure to:</p>
+
+<ul>
+  <li>Delete your old project so you cannot refer to it;</li>
+  <li>Don’t look at my screencast while you WOD; and</li>
+  <li>Reset your timer.</li>
+</ul>
+
+<p>Feel free to keep trying until you make Rx if that’s of interest to you.</p>
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-21 12:42:25 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Model implementation | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <div class="container">
+  <h1><small>Module: </small> Model implementation </h1>
+  <p><p>Learn to implement persistent models using the MySQL relational database management system.</p>
+
+</p>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+    <h2>Learning outcomes</h2>
+
+    
+
+    
+      
+      <h3>Use RDBMS effectively</h3>
+      <p>
+        
+      </p>
+      <p>You can use relational database management systems such as MySQL to effectively and 
+efficiently implement persistance for your applications. </p>
+
+    
+
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+  <h2>Readings and other resources</h2>
+
+    
+
+    <div class="row">
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="https://www.youtube.com/watch?v=EWdBVcKWf7c">Introduction to model implementation</a></h4>
+            <p>MySQL, eBean ORM, and the play-example-mysql application</p>
+
+            <p>
+              
+              <span class="badge">Screencast</span>
+              
+              <span class="badge">18 min</span>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="http://dev.mysql.com/doc/refman/5.7/en/tutorial.html">MySQL tutorial</a></h4>
+            <p>Connecting, disconnecting, queries, databases, batch mode, query examples</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="http://ics-software-engineering.github.io/play-example-mysql/">play-example-mysql</a></h4>
+            <p>Connecting, disconnecting, queries, databases, batch mode, query examples</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="http://www.manning.com/leroux/">Play for Java, Chapter 7</a></h4>
+            <p>Modeling and persistence</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+       </div><div class="row">
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/reading-ebean.html">EBean ORM Readings</a></h4>
+            <p>Links for getting started with EBean object-relational manager</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/reading-mysql-clients.html">MySQL Clients</a></h4>
+            <p>Links to open source MySQL clients for Windows, Mac, and Unix</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/reading-model-implementation-guidelines.html">Model implementation guidelines</a></h4>
+            <p>Standards for model implementation in this class</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+<div class="section-background-1">
+  <div class="container">
+  <h2>Experiential Learning</h2>
+
+    
+
+    <div class="row">
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/experience-play-example-mysql.html">play-example-mysql</a></h4>
+            <p>Learn to install MySQL, a MySQL client, and configure a Play application to connect to a local and cloud-based MySQL instance.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/experience-play-example-sql-technical-essay.html">A25: play-example-mysql Technical Essay</a></h4>
+            <p>Write a technical essay summarizing your experience with the play-example-mysql system.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/experience-digitsmysql.html">Practice WOD: DigitsMySQL</a></h4>
+            <p>Implement back-end persistence for your Digits application</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/experience-digitscloudbees.html">Practice WOD: DigitsCloudBees</a></h4>
+            <p>Deploy your Digits application using CloudBees MySQL.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      </div><div class="row">
+      
+      
+      
+      
+      
+        
+        <div class="col-sm-3">
+          <div class="thumbnail">
+            <h4><a href="/ics314f13/morea/160.model-implementation/experience-model-implementation-technical-essay.html">A26: Model Implementation Technical Essay</a></h4>
+            <p>Write a technical essay summarizing your experience doing the Model Implementation practice WODs.</p>
+
+            <p>
+              
+            </p>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+
+    </div>
+  </div>
+</div>
+
+<div class="section-background-2">
+  <div class="container">
+    <h2>Assessment</h2>
+
+    
+
+    
+      
+      <h3>Group WOD: play-example-login MySQL</h3>
+      <p>
+        
+      </p>
+      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-group-wod-play-example-login-mysql" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 60 min</span>
+        <span style="padding: 2px" class="label label-info">Av: &lt; 60 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: &lt; 60 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Students worked in groups in-class to add a MySQL backend to the play-example-login system 
+and deploy it to the cloud.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>This WOD requires about an hour to implement for Rx time; thus the groups either finished or DNF’d
+with Rx time because classtime ran out after an hour. Ideally, groups would have had up to 90 minutes
+to complete this WOD.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-group-wod-play-example-login-mysql',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 3},
+ { y: 'DNF', num: 3 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
+
+    
+
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-21 12:42:25 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

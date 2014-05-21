@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Model implementation guidelines | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="model-implementation-guidelines">Model implementation guidelines</h1>
+
+<h2 id="dont-use-h2">Don’t use H2</h2>
+
+<p>Although H2 (Play’s in-memory database) might seem easier at first, it is better to bite the bullet and use the same database for development that you’ll use for deployment. For now, that means MySQL since MySQL is the database used by CloudBees.</p>
+
+<p>Enable EBean, MySQL, and Evolutions</p>
+
+<p>In the application.conf file, you’ll want code similar to the following to enable EBean, MySQL, and evolutions:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="c"># Database configuration</span>
+<span class="c"># ~~~~~</span>
+db.default.driver<span class="o">=</span>com.mysql.jdbc.Driver
+db.default.url<span class="o">=</span><span class="s2">&quot;jdbc:&quot;</span><span class="k">${</span><span class="nv">DATABASE_URL_DB</span><span class="k">}</span>
+db.default.user<span class="o">=</span><span class="k">${</span><span class="nv">DATABASE_USERNAME_DB</span><span class="k">}</span>
+db.default.password<span class="o">=</span><span class="k">${</span><span class="nv">DATABASE_PASSWORD_DB</span><span class="k">}</span>
+<span class="c">#</span>
+<span class="c"># Evolutions</span>
+<span class="c"># ~~~~~</span>
+applyEvolutions.default<span class="o">=</span><span class="nb">true</span>
+<span class="c">#</span>
+<span class="c"># Ebean configuration</span>
+<span class="c"># ~~~~~</span>
+ebean.default<span class="o">=</span><span class="s2">&quot;models.*&quot;</span></code></pre></div>
+
+<h2 id="create-private-fields-and-public-accessors-for-all-entity-classes">Create private fields and public accessors for all entity classes</h2>
+
+<p>The Play for Java book, for reasons known only to the authors, persists in recommending that you allow Play to implicitly create accessor methods despite <a href="http://www.manning-sandbox.com/message.jspa?messageID=143570#143570">well-documented problems</a>.</p>
+
+<p>Do not follow their recommendation.  Instead, follow traditional Java best practices and create private fields and public accessors  following the standard JavaBean naming conventions.</p>
+
+<p>The <a href="http://www.playframework.com/documentation/2.2.x/JavaEbean">Play Framework EBean documentation page</a> also discusses some of these issues and explicitly notes that the byte-code enhancement is provided for backward compatibility.</p>
+
+<p>Note that you <em>must</em> name your accessors according to JavaBeans conventions, which are finicky. That means if a field is named “productId”, your getter must be named getProductId and your setter must be named setProductId.  If you name the getter (for example), getProductID, then you’ll get an error like:</p>
+
+<pre><code>Test ControllerTest.testProductController failed:
+JSR-303 validated property 'productId' does not have a corresponding accessor for data binding -
+check your DataBinder's configuration (bean property versus direct field access)
+</code></pre>
+
+<h2 id="entity-classes-should-observe-conventions">Entity classes should observe conventions</h2>
+
+<p>Entity classes should:</p>
+
+<ul>
+  <li>Extend play.db.ebean.Model</li>
+  <li>Be annotated with @Entity</li>
+  <li>Have private fields and public accessors (as noted above).</li>
+  <li>Have a long Id field, annotated with @Id, serving as the primary key for the entity.</li>
+  <li>Have a serialVersionUID field, since a superclass is declared as serializable.</li>
+  <li>Have a static public find() method returning a Finder() instance.</li>
+  <li>Have a field for all relationships this entity participates in. Put another way, all relationships are bi-directional.</li>
+</ul>
+
+<h2 id="do-not-name-entity-classes-with-sql-reserved-words">Do not name entity classes with SQL reserved words</h2>
+
+<p>Do not name any class used as an entity with an <a href="http://developer.mimer.com/validator/sql-reserved-words.tml">SQL reserved word</a> (catalog, connection, cube, cycle, data, group, key, level, input, names, month, module, output, row, space, system, table, user, values, work, etc.) You will get a weird error. Either rename the class or use the JPA annotation to specify a non-conflicting table name.</p>
+
+<h2 id="how-to-read-relationship-notation-so-that-you-understand-it">How to “read” relationship notation so that you understand it</h2>
+
+<p>Consider the following code:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@ManyToOne</span>
+  <span class="kd">private</span> <span class="n">Warehouse</span> <span class="n">warehouse</span><span class="o">;</span>
+  <span class="o">:</span>
+<span class="o">}</span></code></pre></div>
+
+<p>How do you “read” that annotation (and similar ones) in such a way that you understand what’s going on?   I find the following ways of reading the annotation helpful:</p>
+
+<ul>
+  <li>@ManyToOne -&gt; “Many of me maps to one of the following”</li>
+  <li>@OneToMany -&gt; “One of me maps to many of the following”</li>
+  <li>@OneToOne -&gt; “One of me maps to one of the following”</li>
+</ul>
+
+<p>So the above annotation of the private warehouse field could be read as: “Many of me (StockItems) maps to one of the following (Warehouse).”</p>
+
+<h2 id="make-all-relationships-bidirectional">Make all relationships bidirectional</h2>
+
+<p>A bidirectional relationship means that if two entities A and B are in a relationship, they each “point” at each other. From a Java perspective, it means that class A has a field that takes instance(s) of B, and class B has a field that takes instance(s) of A.</p>
+
+<p>While bidirectionality is not required, I recommend that you always create bidirectional relationships in order to simplify model manipulation.</p>
+
+<p>The implications of a bidirectional relationship for annotations are as follows:</p>
+
+<ul>
+  <li>If one entity has an @OneToMany field, the entity on the other side has an @ManyToOne field.</li>
+  <li>If one entity has an @OneToOne field, the entity on the other side has an @OneToOne field.</li>
+  <li>If one entity has an @ManyToMany field, the entity on the other side also has an @ManyToMany field.</li>
+</ul>
+
+<p>So, for example, if there is a StockItem class that declares that many instances of it map to one instance of a Warehouse:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@ManyToOne</span>
+  <span class="kd">private</span> <span class="n">Warehouse</span> <span class="n">warehouse</span><span class="o">;</span>
+  <span class="o">:</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Then the Warehouse class should have a field that declares that one instance of it maps to many instances of StockItem:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Warehouse</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;warehouse&quot;</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">List</span> <span class="n">stockItems</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+  <span class="o">:</span>
+<span class="o">}</span></code></pre></div>
+
+<p>See the next guideline for explanation of the mappedBy parameter.</p>
+
+<h2 id="bidirectional-relationships-must-specify-the-owning-entity-using-mappedby">Bidirectional relationships must specify the owning entity using mappedBy</h2>
+
+<p>Anytime you specify a bidirectional relationship, only one of the entities will actually “implement” the relationship through the creation of a column in the table associated with that entity. The entity containing the column is referred to as the “owner” of the relationship. There should be only one “owner” in a bidirectional relationship, and to indicate that, you provide a “mappedBy” parameter in the non-owning entity. Let’s look at three cases:</p>
+
+<h3 id="case-1-onetomany-and-manytoone">Case 1: @OneToMany and @ManyToOne</h3>
+
+<p>Entities with an @ManyToOne field must always “own” that relationship: the ORM will define a column in the table associated with that relationship to store the IDs of the other entity.</p>
+
+<p>To make an @ManyToOne relationship truly bidirectional, you have to not only annotate a field in the other entity with @OneToMany, you also have to tell the ORM explicitly that the other entity is going to manage the relationship. You do this by adding the “mappedBy” parameter to the @OneToMany annotation, specifying the field in the other entity that will hold the relationship. For example:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@ManyToOne</span>
+  <span class="kd">private</span> <span class="n">Warehouse</span> <span class="n">warehouse</span><span class="o">;</span>
+  <span class="o">:</span>
+<span class="o">}</span>
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Warehouse</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;warehouse&quot;</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">List</span> <span class="n">stockItems</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+  <span class="o">:</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Thus, StockItem “owns” the relationship with Warehouse, and Warehouse indicates this by telling the ORM that its OneToMany relationship is implemented through the warehouse field in the StockItem entity.</p>
+
+<h3 id="case-2-onetoone">Case 2: @OneToOne</h3>
+
+<p>The exact same situation exists with bidirectional OneToOne relationships. In this case, one of the entities should have the mappedBy parameter to indicate that the other entity is the owner, but either entity can be chosen. Here is an example:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Warehouse</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;warehouse&quot;</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">Address</span> <span class="n">address</span><span class="o">;</span>
+  <span class="o">:</span>
+<span class="o">}</span>
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Address</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@OneToOne</span>
+  <span class="kd">private</span> <span class="n">Warehouse</span> <span class="n">warehouse</span><span class="o">;</span>
+<span class="o">}</span></code></pre></div>
+
+<h4 id="case-3-manytomany">Case 3: @ManyToMany</h4>
+
+<p>Bidirectional ManyToMany relationships are just like bidirectional OneToOne relationships: you have to provide the mappedBy parameter to specify an owner. Here’s an example:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Product</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+ 
+  <span class="nd">@ManyToMany</span>
+  <span class="kd">private</span> <span class="n">List</span> <span class="n">tags</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+  <span class="o">:</span>
+<span class="o">}</span>
+     
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Tag</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+    
+  <span class="nd">@ManyToMany</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;tags&quot;</span><span class="o">)</span>
+  <span class="kd">private</span> <span class="n">List</span> <span class="n">products</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+<span class="o">}</span></code></pre></div>
+
+<h2 id="use-cascadetypepersist">Use CascadeType.PERSIST</h2>
+
+<p>The <a href="http://openjpa.apache.org/builds/latest/docs/docbook/manual/jpa_overview_meta_field.html#jpa_overview_meta_cascade">OpenJPA documentation</a> recommends “liberal application” of the parameter “cascade=CascadeType.PERSIST” in relationship annotations. This tells the ORM to implicitly save out entities by following links. For example:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Product</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+  <span class="o">:</span>
+  <span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;product&quot;</span><span class="o">,</span> <span class="n">cascade</span><span class="o">=</span><span class="n">CascadeType</span><span class="o">.</span><span class="na">PERSIST</span><span class="o">)</span>
+  <span class="kd">public</span> <span class="n">List</span> <span class="n">stockItems</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+  <span class="o">:</span>
+<span class="o">}</span></code></pre></div>
+
+<p>This says that if you invoke the save() on a Product instance, any StockItem instances in the stockitems field will also be saved.</p>
+
+<p>Note that other cascade types, such as CascadeType.ALL, can result in unexpected entity deletion.</p>
+
+<h2 id="implement-a-find-method-in-entity-classes">Implement a find() method in entity classes</h2>
+
+<p>Provide all Entity classes with a static find() method that returns a new instance of an EBean Finder() instance.   It will look something like this, assuming the Entity class is named Foo:</p>
+
+<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Finder</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">,</span> <span class="n">Foo</span><span class="o">&gt;</span> <span class="n">find</span><span class="o">()</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="n">Finder</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">,</span> <span class="n">Foo</span><span class="o">&gt;(</span><span class="n">Long</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Now you can do queries using this find() method.  Here are some examples:</p>
+
+<div class="highlight"><pre><code class="java"><span class="c1">// Get all Foos in DB.</span>
+<span class="n">List</span> <span class="n">foos</span> <span class="o">=</span> <span class="n">Foo</span><span class="o">.</span><span class="na">find</span><span class="o">().</span><span class="na">findList</span><span class="o">();</span>
+
+<span class="c1">// Get the Foo with PK=1</span>
+<span class="n">Foo</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="o">.</span><span class="na">find</span><span class="o">().</span><span class="na">byId</span><span class="o">(</span><span class="mi">1L</span><span class="o">)</span>
+
+<span class="c1">// A more complicated query</span>
+<span class="n">List</span> <span class="n">foos</span> <span class="o">=</span> <span class="n">Foo</span><span class="o">.</span><span class="na">find</span><span class="o">()</span>
+                    <span class="o">.</span><span class="na">where</span><span class="o">()</span>
+                    <span class="o">.</span><span class="na">ge</span><span class="o">(</span><span class="s">&quot;orderDate&quot;</span><span class="o">,</span> <span class="n">lastWeek</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">orderBy</span><span class="o">(</span><span class="s">&quot;customerId, idDescription&quot;</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">setMaxRows</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
+                    <span class="o">.</span><span class="na">findList</span><span class="o">();</span></code></pre></div>
+
+<p>See the resources associated with this module for links to pages with more information about the Finder API.</p>
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-21 12:42:25 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="well">
+      <div id="assessment-group-wod-play-example-login-mysql" style="height: 150px;"></div>
+      <span class="h4">
+        <span style="padding: 2px" class="label label-success">Rx: &lt; 60 min</span>
+        <span style="padding: 2px" class="label label-info">Av: &lt; 60 min</span>
+        <span style="padding: 2px" class="label label-warning">Sd: &lt; 60 min</span>
+      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+</span>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    
+<p>Students worked in groups in-class to add a MySQL backend to the play-example-login system 
+and deploy it to the cloud.</p>
+
+<p>Discussion:</p>
+
+<ul>
+  <li>This WOD requires about an hour to implement for Rx time; thus the groups either finished or DNF’d
+with Rx time because classtime ran out after an hour. Ideally, groups would have had up to 90 minutes
+to complete this WOD.</li>
+</ul>
+
+  </div>
+
+<script>
+Morris.Bar({
+  element: 'assessment-group-wod-play-example-login-mysql',
+  hideHover: 'auto',
+  data: 
+[{ y: 'Rx', num: 3},
+ { y: 'DNF', num: 3 }]
+,
+  xkey: 'y',
+  ykeys: ['num'],
+  resize: true,
+  labels: ['Students']
+});
+</script>
+
+
+
+</div>
