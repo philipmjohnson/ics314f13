@@ -18,6 +18,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-textbookmania
  - assessment-model-design-technical-essay
+ - assessment-wod-play-example-form
 morea_type: module
 morea_icon_url: /morea/150.model-design/logo.png
 morea_labels:
