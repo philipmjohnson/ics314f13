@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> WOD Performance trends | ICS 314, Fall 2013 </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!--  Load bootswatch-based Morea theme file. -->
+  <link rel="stylesheet" href="/ics314f13/css/themes/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="/ics314f13/css/style.css">
+  <link rel="stylesheet" href="/ics314f13/css/syntax.css">
+  <link rel="shortcut icon" href="/ics314f13/favicon.ico" type="image/x-icon" />
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.2.0/respond.js"></script>
+  <![endif]-->
+
+  <!-- Load Bootstrap JavaScript components -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script
+  src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Responsive navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <!--  Display three horizontal lines when navbar collapsed. -->
+        <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"> ICS 314, Fall 2013 </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/ics314f13/index.html">Home</a></li>
+        <li><a href="/ics314f13/modules/">Modules</a></li>
+        <li><a href="/ics314f13/outcomes/">Outcomes</a></li>
+        <li><a href="/ics314f13/readings/">Readings</a></li>
+        <li><a href="/ics314f13/experiences/">Experiences</a></li>
+        <li><a href="/ics314f13/assessments/">Assessments</a></li>
+        <li><a href="/ics314f13/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h1 id="wod-performance-trends">WOD Performance Trends</h1>
+
+<p>A central question for this approach to education is whether the “WOD” approach actually works:  do students “get better” over time at software development as a result of this kind of pedagogy?</p>
+
+<p>Gaining empirical insight into whether the students are improving in performance over time is challenging due to the following confounding variables:</p>
+
+<ul>
+  <li>The WODs vary in difficulty, so an increase or decrease in WOD time does not necessarily indicate an increase or decrease in performance capability; it is more likely due to the difficulty of the task.</li>
+  <li>My assignment of Rx, Sd, and Av times is arbitrary.  It is quite possible that  increases in (for example) the number of Rx performances over time is not due to actual performance improvement, but merely due to me assigning an easier threshold for Rx as the course goes on.</li>
+</ul>
+
+<h2 id="performance-trends">Performance trends</h2>
+
+<p>To attempt to gain some preliminary insight into performance trends over time, I constructed a box plot showing the performance times (in seconds) for all students who complete a given WOD successfully (i.e. do not DNF).    The following chart shows the minimum, maximum, 2nd and 3rd quartiles, and median values for the non-DNF WOD times.</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/08/box-plot-login.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/08/box-plot-login.png" /></a>
+  </div>
+</div>
+
+<p>Here are some things to note about this visualization:</p>
+
+<ul>
+  <li>It removes the “bias” present in assigning Rx, Sd, and Av to WOD times, as only the actual performance time is represented.</li>
+  <li>There appears to be a relatively consistent ratio of approximately 3:1 between the fastest and slowest students who successfully finish the WOD.   This can be observed by looking at the minimum and maximum values. I believe 3:1 to be a conservative estimate of productivity differences, since this does not account for students who get cut off at the DNF time and who might have ultimately completed the WOD with significant additional effort.</li>
+  <li>The most hopeful indication of performance improvement is the proportional decrease in the size of the quartile box.  This means that instead of students being spread out across all times, there are more students finishing in approximately the same time, with fewer students doing substantially better or worse.</li>
+</ul>
+
+<h2 id="dnf-trends">DNF trends</h2>
+
+<p>The box plot visualization omits data regarding students who DNF, but that is obviously an important aspect of performance.  To provide some preliminary insight, here is a simple chart showing the percentage of the class that DNF’d for the WODs in chronological sequence:</p>
+
+<div class="center-block">
+  <div class="img-responsive">
+    <a href="http://ics314f13.files.wordpress.com/2013/08/dnf-login.png"><img width="400px" src="http://ics314f13.files.wordpress.com/2013/08/dnf-login.png" /></a>
+  </div>
+</div>
+
+<p>Clearly, the percentage DNF shows a precipitous decline after the first two WODs.  I believe that the decline in DNFs are a result of: (a) students learning how to use the homework to prepare for the WOD;  (b) students becoming accustomed to “programming under pressure”, and not having it impede their ability to accomplish the task at hand; and (c) several of the poorer performing students dropping the class over the course of the first six WODs. (Although note also that one of the highest performing students also dropped the class, so attrition did not occur from the bottom only.)</p>
+
+<p>My belief is that this decline in DNF cannot be attributed to the WODs becoming easier. The Digits-Delete WOD is substantially more complex than the CharFrequency WOD, even though the Rx times are the same.</p>
+
+<p>Taken together, the decline in DNF along with the reduction in variability of performance for the second and third quartiles appears to provide evidence that more students are performing “adequately”, and that “adequate” is becoming less variable over time.</p>
+
+</div>
+
+
+
+<div class="footer-background">
+<footer>
+  <div class="container page-footer">
+    
+      <p><a href="http://philipmjohnson.org">Philip Johnson</a> | Information and Computer Sciences | University of Hawaii <br />
+johnson@hawaii.edu<br /></p>
+
+    
+    <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
+       Last update on: <span>2014-05-22 08:04:38 -1000</span></p>
+  </div>
+</footer>
+</div>
+</body>
+</html>
