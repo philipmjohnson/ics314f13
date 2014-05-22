@@ -37,14 +37,6 @@
       <ul class="nav navbar-nav">
         <li><a href="{{ site.baseurl }}/index.html">Home</a></li>
         <li><a href="{{ site.baseurl }}/modules/">Modules</a></li>
-<<<<<<< HEAD
-        <li><a href="{{ site.baseurl }}/outcomes/">Outcomes</a></li>
-        <li><a href="{{ site.baseurl }}/readings/">Readings</a></li>
-        <li><a href="{{ site.baseurl }}/experiences/">Experiences</a></li>
-        <li><a href="{{ site.baseurl }}/assessments/">Assessments</a></li>
-        <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
-        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
-=======
         {% unless site.morea_outcome_pages.size == 0 %}
           <li><a href="{{ site.baseurl }}/outcomes/">Outcomes</a></li>
         {% endunless %}
@@ -57,7 +49,8 @@
         {% unless site.morea_assessment_pages.size == 0 %}
           <li><a href="{{ site.baseurl }}/assessments/">Assessments</a></li>
         {% endunless %}
->>>>>>> upstream/master
+        <li><a href="{{ site.baseurl }}/schedule/">Schedule</a></li>
+        <li><a href="https://groups.google.com/forum/#!forum/ics314f13">Discussion</a></li>
       </ul>
     </div>
   </div>
