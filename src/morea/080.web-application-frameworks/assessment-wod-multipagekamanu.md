@@ -3,6 +3,11 @@ title: "Individual WOD: MultiPageKamanu"
 published: true
 morea_id: assessment-wod-multipagekamanu
 morea_type: assessment
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-write-code-efficiently 
+ - outcome-twitter-bootstrap
+ - outcome-play
 morea_sort_order: 2
 
 morea_morris_chart_data: |

@@ -4,6 +4,9 @@ published: true
 morea_id: assessment-find-violations
 morea_type: assessment
 morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-coding-standards-benefits
+ - outcome-coding-standards-best-practices
 morea_labels:
 morea_morris_chart_data: |
   [{ y: 'Satisfactory', num: 24 },

@@ -4,6 +4,10 @@ published: true
 morea_id: assessment-group-wod-surferpedia-monday
 morea_type: assessment
 morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-write-code-efficiently 
+ - outcome-group-work
 
 morea_morris_chart_data: |
 

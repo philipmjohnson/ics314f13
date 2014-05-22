@@ -4,7 +4,9 @@ published: true
 morea_id: assessment-professional-portfolio
 morea_type: assessment
 morea_sort_order: 1
-
+morea_outcomes_assessed:
+ - outcome-professional-persona
+ - outcome-professional-portfolio
 morea_morris_chart_data: |
 
   [{ y: 'Excellent', num: 2},

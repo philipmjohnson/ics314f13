@@ -4,6 +4,9 @@ published: true
 morea_id: assessment-java-coding-technical-essay
 morea_type: assessment
 morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-technical-writing
+ - outcome-write-code-efficiently
 morea_labels:
 morea_morris_chart_data: |
   [{ y: 'Satisfactory', num: 20 },

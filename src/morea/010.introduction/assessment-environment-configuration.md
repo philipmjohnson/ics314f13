@@ -4,6 +4,8 @@ published: true
 morea_id: assessment-environment-configuration
 morea_type: assessment
 morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-development-environment
 morea_morris_chart_data: |
  [{ y: 'Satisfactory', num: 22 },
   { y: 'Unsatisfactory', num: 4 }]

@@ -4,6 +4,8 @@ published: true
 morea_id: assessment-web-application-frameworks-technical-essay
 morea_type: assessment
 morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-technical-writing
 morea_labels:
 morea_morris_chart_data: |
   [{ y: 'Excellent', num: 2 },

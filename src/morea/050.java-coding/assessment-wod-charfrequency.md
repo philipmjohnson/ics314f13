@@ -4,7 +4,8 @@ published: true
 morea_id: assessment-wod-charfrequency
 morea_type: assessment
 morea_sort_order: 2
-
+morea_outcomes_assessed:
+ - outcome-write-code-efficiently
 morea_morris_chart_data: |
 
   [{ y: 'Rx', num: 3 },

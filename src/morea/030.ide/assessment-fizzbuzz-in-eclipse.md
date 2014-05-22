@@ -4,6 +4,9 @@ published: true
 morea_id: assessment-fizzbuzz-in-eclipse
 morea_type: assessment
 morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-technical-writing
 morea_morris_chart_data: |
 
   [{ y: 'Excellent', num: 2 },

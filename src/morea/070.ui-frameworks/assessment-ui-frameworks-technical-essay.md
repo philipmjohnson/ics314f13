@@ -3,6 +3,8 @@ title: "UI Frameworks Technical Essay"
 published: true
 morea_id: assessment-ui-frameworks-technical-essay
 morea_type: assessment
+morea_outcomes_assessed:
+ - outcome-technical-writing
 morea_sort_order: 1
 morea_labels:
 morea_morris_chart_data: |

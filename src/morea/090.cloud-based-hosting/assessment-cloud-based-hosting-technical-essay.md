@@ -4,6 +4,8 @@ published: true
 morea_id: assessment-cloud-based-hosting-technical-essay
 morea_type: assessment
 morea_sort_order: 2
+morea_outcomes_assessed:
+ - outcome-technical-writing
 morea_labels:
 morea_morris_chart_data: |
   [{ y: 'Excellent', num: 4 },

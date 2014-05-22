@@ -4,6 +4,9 @@ published: true
 morea_id: assessment-professional-networks
 morea_type: assessment
 morea_sort_order: 2
+morea_outcomes_assessed:
+ - outcome-networking
+ - outcome-technical-writing
 morea_morris_chart_data: |
 
   [{ y: 'Satisfactory', num: 22 },

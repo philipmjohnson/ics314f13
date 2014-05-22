@@ -4,6 +4,8 @@ published: true
 morea_id: assessment-discussion-posting
 morea_type: assessment
 morea_sort_order: 2
+morea_outcomes_assessed:
+ - outcome-course-structure
 morea_morris_chart_data: |
   [{ y: 'Satisfactory', num: 26 },
    { y: 'Unsatisfactory', num: 0 }]

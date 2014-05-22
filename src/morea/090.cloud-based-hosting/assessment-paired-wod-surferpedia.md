@@ -4,7 +4,11 @@ published: true
 morea_id: assessment-paired-wod-surferpedia
 morea_type: assessment
 morea_sort_order: 3
-
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-write-code-efficiently 
+ - outcome-play
+ - outcome-group-work
 morea_morris_chart_data: |
 
   [{ y: 'Rx', num: 2 },
