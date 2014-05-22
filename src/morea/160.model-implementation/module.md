@@ -20,6 +20,7 @@ morea_experiences:
  - experience-model-implementation-technical-essay
 morea_assessments:
  - assessment-group-wod-play-example-login-mysql
+ - assessment-model-implementation-technical-essay
 morea_type: module
 morea_icon_url: /morea/160.model-implementation/logo.png
 morea_labels:
