@@ -4,7 +4,13 @@ published: true
 morea_id: assessment-wod-surferpedia-foot-style
 morea_type: assessment
 morea_sort_order: 2
-
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-write-code-efficiently
+ - outcome-twitter-bootstrap
+ - outcome-play
+ - outcome-cloud-based-hosting
+ - outcome-cloud-based-deployment
 morea_morris_chart_data: |
 
   [{ y: 'Rx', num: 2 },

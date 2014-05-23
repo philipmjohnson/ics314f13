@@ -4,7 +4,12 @@ published: true
 morea_id: assessment-wod-digitsdelete
 morea_type: assessment
 morea_sort_order: 3
-
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-create-standards-compliant-code
+ - outcome-write-code-efficiently
+ - outcome-twitter-bootstrap
+ - outcome-play
 morea_morris_chart_data: |
 
   [{ y: 'Rx', num: 5 },

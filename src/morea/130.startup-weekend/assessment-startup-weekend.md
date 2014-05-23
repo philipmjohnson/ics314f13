@@ -4,7 +4,15 @@ published: true
 morea_id: assessment-startup-weekend
 morea_type: assessment
 morea_sort_order: 1
-
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-write-code-efficiently
+ - outcome-html-css
+ - outcome-twitter-bootstrap
+ - outcome-play
+ - outcome-cloud-based-hosting
+ - outcome-group-work
+ - outcome-cloud-based-deployment
 morea_morris_chart_data: |
 
   [{ y: 'Partipants', num: 8},

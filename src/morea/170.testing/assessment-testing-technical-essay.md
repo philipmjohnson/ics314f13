@@ -2,6 +2,8 @@
 title: "Testing Technical Essay"
 published: true
 morea_id: assessment-testing-technical-essay
+morea_outcomes_assessed:
+ - outcome-technical-writing
 morea_type: assessment
 morea_sort_order: 2
 morea_labels:

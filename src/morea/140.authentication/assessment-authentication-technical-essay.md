@@ -2,6 +2,8 @@
 title: "Authentication and Authorization Technical Essay"
 published: true
 morea_id: assessment-authentication-technical-essay
+morea_outcomes_assessed:
+ - outcome-technical-writing
 morea_type: assessment
 morea_sort_order: 2
 morea_labels:

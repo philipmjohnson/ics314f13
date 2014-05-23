@@ -4,7 +4,13 @@ published: true
 morea_id: assessment-group-wod-play-example-login-mysql
 morea_type: assessment
 morea_sort_order: 1
-
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-write-code-efficiently
+ - outcome-play
+ - outcome-cloud-based-hosting
+ - outcome-group-work
+ - outcome-rdbms
 morea_morris_chart_data: |
 
   [{ y: 'Rx', num: 3},

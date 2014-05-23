@@ -4,6 +4,15 @@ published: true
 morea_id: assessment-group-wod-surferpediaupdates
 morea_type: assessment
 morea_sort_order: 1
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-create-standards-compliant-code
+ - outcome-write-code-efficiently
+ - outcome-twitter-bootstrap
+ - outcome-play
+ - outcome-cloud-based-hosting
+ - outcome-group-work
+ - outcome-cloud-based-deployment
 
 morea_morris_chart_data: |
 

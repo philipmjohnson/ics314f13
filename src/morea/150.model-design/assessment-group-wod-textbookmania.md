@@ -4,7 +4,8 @@ published: true
 morea_id: assessment-group-wod-textbookmania
 morea_type: assessment
 morea_sort_order: 1
-
+morea_outcomes_assessed:
+ - outcome-er-modeling
 morea_morris_chart_data: |
 
   [{ y: 'Rx', num: 0 },

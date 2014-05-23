@@ -4,7 +4,8 @@ published: true
 morea_id: assessment-wod-play-example-form
 morea_type: assessment
 morea_sort_order: 3
-
+morea_outcomes_assessed:
+ - outcome-er-modeling
 morea_morris_chart_data: |
 
   [{ y: 'Rx', num: 1 },

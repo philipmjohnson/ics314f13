@@ -11,6 +11,12 @@ morea_morris_chart_data: |
    { y: 'Av', num: 7 },
    { y: 'Sd', num: 3 },
    { y: 'DNF', num: 1 }]
+morea_outcomes_assessed:
+ - outcome-eclipse-capability
+ - outcome-create-standards-compliant-code
+ - outcome-write-code-efficiently
+ - outcome-play
+ - outcome-cloud-based-hosting
 
 morea_morris_chart_caption: |
 
