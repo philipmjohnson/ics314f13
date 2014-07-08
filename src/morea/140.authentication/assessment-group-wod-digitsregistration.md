@@ -12,14 +12,10 @@ morea_outcomes_assessed:
  - outcome-play
  - outcome-cloud-based-hosting
  - outcome-group-work
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 1 },
-   { y: 'Av', num: 3 },
-   { y: 'Sd', num: 1 },
-   { y: 'DNF', num: 1 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[1, 3, 1, 1]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   Students worked in groups in-class to add a registration page for new users to one of 
   their Digits applications.
@@ -30,6 +26,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
 
 

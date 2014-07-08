@@ -6,14 +6,10 @@ morea_type: assessment
 morea_sort_order: 2
 morea_outcomes_assessed:
  - outcome-write-code-efficiently
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 3 },
-   { y: 'Av', num: 4 },
-   { y: 'Sd', num: 5 },
-   { y: 'DNF', num: 10 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[3, 4, 5, 10]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   CharFrequency is the first “real” WOD of the semester. Students were asked to individually implement a Java program which differs only slightly from the last Java Practice WOD.
 
@@ -23,7 +19,7 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 10 min" Av="10-15 min" Sd="15-25 min" DNF="25+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 10 min" Av="10-15 min" Sd="15-25 min" DNF="25+ min or incorrect"  %}
 
 
 

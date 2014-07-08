@@ -9,14 +9,10 @@ morea_outcomes_assessed:
  - outcome-write-code-efficiently 
  - outcome-group-work
 
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 1 },
-   { y: 'Av', num: 2 },
-   { y: 'Sd', num: 3 },
-   { y: 'DNF', num: 30 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[1, 2, 3, 0]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   Students worked in groups in-class to use Google Hangouts and GitHub to collaboratively create a release of 
   one of their Surferpedia systems.
@@ -28,6 +24,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
 
 

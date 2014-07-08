@@ -7,13 +7,9 @@ morea_sort_order: 1
 morea_outcomes_assessed:
  - outcome-professional-persona
  - outcome-professional-portfolio
-morea_morris_chart_data: |
-
-  [{ y: 'Excellent', num: 2},
-   { y: 'Satisfactory', num: 20 },
-   { y: 'Unsatisfactory', num: 4 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[2, 20, 4]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
 
   This assessment verified that students implemented a professional portfolio 
   that satisfied the guidelines in the [Professional Portfolio Style Guide](/morea/020.professional-persona/reading-4.html).
@@ -25,6 +21,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}
 
 

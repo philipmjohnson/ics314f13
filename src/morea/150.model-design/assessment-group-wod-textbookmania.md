@@ -6,14 +6,10 @@ morea_type: assessment
 morea_sort_order: 1
 morea_outcomes_assessed:
  - outcome-er-modeling
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 0 },
-   { y: 'Av', num: 4 },
-   { y: 'Sd', num: 2 },
-   { y: 'DNF', num: 0 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[0, 4, 2, 0]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   Students worked in groups in-class to collaboratively 
   develop an ER diagram using LucidCharts for the TextBookMania application.
@@ -24,6 +20,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
 
 

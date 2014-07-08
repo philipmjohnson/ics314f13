@@ -10,14 +10,9 @@ morea_outcomes_assessed:
  - outcome-play
 morea_sort_order: 2
 
-morea_morris_chart_data: |
-
-  [{ y: 'Rx', num: 5 },
-   { y: 'Av', num: 7 },
-   { y: 'Sd', num: 4 },
-   { y: 'DNF', num: 3 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[5, 7, 4, 3]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   MultiPageKamanu is a variant of the PlayResponsiveKamanu practice WOD.
 
@@ -27,6 +22,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 20 min" Av="20-30 min" Sd="30-40 min" DNF="40+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 20 min" Av="20-30 min" Sd="30-40 min" DNF="40+ min or incorrect"  %}
 
 

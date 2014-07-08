@@ -11,14 +11,10 @@ morea_outcomes_assessed:
  - outcome-play
  - outcome-cloud-based-hosting
  - outcome-cloud-based-deployment
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 2 },
-   { y: 'Av', num: 9 },
-   { y: 'Sd', num: 2 },
-   { y: 'DNF', num: 2 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[2, 9, 2, 2]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   Students worked individually to extend the Surferpedia application to indicate if a surfer uses 
   regular or goofy foot style and deploy the results to CloudBees. About 8 files and 100 LOC changed.
@@ -29,6 +25,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 30 min" Av="30-45 min" Sd="45-60 min" DNF="60+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 30 min" Av="30-45 min" Sd="45-60 min" DNF="60+ min or incorrect"  %}
 
 

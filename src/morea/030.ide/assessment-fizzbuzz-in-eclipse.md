@@ -7,13 +7,10 @@ morea_sort_order: 1
 morea_outcomes_assessed:
  - outcome-eclipse-capability
  - outcome-technical-writing
-morea_morris_chart_data: |
 
-  [{ y: 'Excellent', num: 2 },
-   { y: 'Satisfactory', num: 18 },
-   { y: 'Unsatisfactory', num: 4 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[2, 18, 4]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
 
  This assessment verified that students could implement a trivial Java program 
  using the Eclipse IDE and write up their experiences in an appropriate manner.
@@ -26,4 +23,4 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

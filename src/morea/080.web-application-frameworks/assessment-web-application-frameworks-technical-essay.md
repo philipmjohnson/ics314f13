@@ -7,12 +7,10 @@ morea_sort_order: 1
 morea_outcomes_assessed:
  - outcome-technical-writing
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Excellent', num: 2 },
-   { y: 'Satisfactory', num: 11  },
-   { y: 'Unsatisfactory', num: 4 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[2, 11, 4]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
   This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Web Application Frameworks practice WODs.
 
   Discussion:
@@ -21,4 +19,4 @@ morea_morris_chart_caption: |
   * It feels weird to me to take off points because a blog post is "boring", but maybe I should start doing it just to get your creative juices flowing.   If you came across your own postings online, would you want to work with yourself?   Do you think, "Wow, this person is creative, intelligent, and probably fun to hang out with!" 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

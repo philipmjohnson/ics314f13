@@ -4,13 +4,6 @@ published: true
 morea_id: assessment-wod-digitshidden
 morea_type: assessment
 morea_sort_order: 3
-
-morea_morris_chart_data: |
-
-  [{ y: 'Rx', num: 4 },
-   { y: 'Av', num: 7 },
-   { y: 'Sd', num: 3 },
-   { y: 'DNF', num: 1 }]
 morea_outcomes_assessed:
  - outcome-eclipse-capability
  - outcome-create-standards-compliant-code
@@ -18,7 +11,9 @@ morea_outcomes_assessed:
  - outcome-play
  - outcome-cloud-based-hosting
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[4, 7, 3, 1]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   This was a solo WOD in which the students had to design a scala template to abstract away some raw html code in their view.  The WOD required them to touch just two files in their Digits application.
 
@@ -28,6 +23,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 7 min" Av="7-14 min" Sd="14-21 min" DNF="21+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 7 min" Av="7-14 min" Sd="14-21 min" DNF="21+ min or incorrect"  %}
 
 

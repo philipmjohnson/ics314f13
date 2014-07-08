@@ -7,14 +7,10 @@ morea_sort_order: 2
 morea_outcomes_assessed:
  - outcome-write-code-efficiently
  - outcome-html-css
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 1 },
-   { y: 'Av', num: 7 },
-   { y: 'Sd', num: 1 },
-   { y: 'DNF', num: 9 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[1, 7, 1, 9]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   BrowserHistory4 is a slight variant of the BrowserHistory3 practice WOD.
 
@@ -26,6 +22,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 10 min" Av="10-15 min" Sd="15-20 min" DNF="20+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 10 min" Av="10-15 min" Sd="15-20 min" DNF="20+ min or incorrect"  %}
 
 

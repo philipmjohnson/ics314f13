@@ -8,11 +8,10 @@ morea_outcomes_assessed:
  - outcome-coding-standards-benefits
  - outcome-coding-standards-best-practices
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Satisfactory', num: 24 },
-   { y: 'Unsatisfactory', num: 0 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[0, 24, 0]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
  This in-class assessment verified that students could find basic violations of the Elements of Java Style 
  in sample Java code when working in a team. 
 
@@ -22,4 +21,4 @@ morea_morris_chart_caption: |
      their knowledge of EJS by playing.
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

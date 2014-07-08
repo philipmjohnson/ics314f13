@@ -21,12 +21,10 @@ morea_outcomes_assessed:
 morea_type: assessment
 morea_sort_order: 2
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Excellent', num: 5  },
-   { y: 'Satisfactory', num: 10  },
-   { y: 'Unsatisfactory', num: 0 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[5, 10, 0]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
 
   This assessment evaluated the ability of students to complete all seven aspects of the final exam 
   successfully.
@@ -38,4 +36,4 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

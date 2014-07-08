@@ -7,11 +7,10 @@ morea_outcomes_assessed:
 morea_type: assessment
 morea_sort_order: 2
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Satisfactory', num: 15  },
-   { y: 'Unsatisfactory', num: 0 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[0, 15, 0]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
 
   This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Authorization and Authentication practice WODs.
 
@@ -21,4 +20,4 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

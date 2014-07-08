@@ -7,12 +7,10 @@ morea_outcomes_assessed:
 morea_type: assessment
 morea_sort_order: 2
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Excellent', num: 4 },
-   { y: 'Satisfactory', num: 12  },
-   { y: 'Unsatisfactory', num: 0 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[4, 12, 0]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
   This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Model Design practice WODs.
 
   Discussion:
@@ -22,4 +20,4 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

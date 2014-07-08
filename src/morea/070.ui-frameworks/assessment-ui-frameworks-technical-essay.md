@@ -7,12 +7,10 @@ morea_outcomes_assessed:
  - outcome-technical-writing
 morea_sort_order: 1
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Excellent', num: 2 },
-   { y: 'Satisfactory', num: 13  },
-   { y: 'Unsatisfactory', num: 2 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[2, 13, 2]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
   This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the UI Frameworks practice WODs.
 
   Discussion:
@@ -23,4 +21,4 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

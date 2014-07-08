@@ -7,12 +7,10 @@ morea_outcomes_assessed:
 morea_type: assessment
 morea_sort_order: 2
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Excellent', num: 1 },
-   { y: 'Satisfactory', num: 10  },
-   { y: 'Unsatisfactory', num: 3 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[1, 10, 3]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
 
   This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Testing practice WODs.
 
@@ -23,4 +21,4 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

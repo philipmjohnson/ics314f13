@@ -13,12 +13,10 @@ morea_outcomes_assessed:
  - outcome-cloud-based-hosting
  - outcome-group-work
  - outcome-cloud-based-deployment
-morea_morris_chart_data: |
 
-  [{ y: 'Partipants', num: 8},
-   { y: 'Non-participants', num: 8 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[8, 8]"
+morea_chartjs_labels: '["Participants", "Non-participants"]'
+morea_chartjs_caption: |
   
   This assessment shows what percentage of students in this class signed up, paid for, and attended Startup Weekend.
 
@@ -30,6 +28,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}
 
 

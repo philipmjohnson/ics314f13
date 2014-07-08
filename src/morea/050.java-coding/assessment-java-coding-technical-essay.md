@@ -8,11 +8,11 @@ morea_outcomes_assessed:
  - outcome-technical-writing
  - outcome-write-code-efficiently
 morea_labels:
-morea_morris_chart_data: |
-  [{ y: 'Satisfactory', num: 20 },
-   { y: 'Unsatisfactory', num: 4 }]
 
-morea_morris_chart_caption: |
+morea_chartjs_data: "[0, 20, 4]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
+
  This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Java Coding practice WODs.
 
  Discussion:
@@ -23,4 +23,4 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

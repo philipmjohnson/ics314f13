@@ -11,12 +11,10 @@ morea_outcomes_assessed:
  - outcome-cloud-based-hosting
  - outcome-group-work
  - outcome-rdbms
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 3},
-   { y: 'DNF', num: 3 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[3, 3]"
+morea_chartjs_labels: '["Rx", "DNF"]'
+morea_chartjs_caption: |
 
   Students worked in groups in-class to add a MySQL backend to the play-example-login system 
   and deploy it to the cloud.
@@ -29,6 +27,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 60 min" Av="< 60 min" Sd="< 60 min" DNF="60+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 60 min" Av="< 60 min" Sd="< 60 min" DNF="60+ min or incorrect"  %}
 
 

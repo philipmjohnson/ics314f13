@@ -6,10 +6,9 @@ morea_type: assessment
 morea_sort_order: 1
 morea_outcomes_assessed:
  - outcome-development-environment
-morea_morris_chart_data: |
- [{ y: 'Satisfactory', num: 22 },
-  { y: 'Unsatisfactory', num: 4 }]
-morea_morris_chart_caption: |
+morea_chartjs_data: "[0, 22, 4]"
+morea_chartjs_labels: '["Excellent", "Satisfactory", "Unsatisfactory"]'
+morea_chartjs_caption: |
  This assessment verified that students obtained laptops with the appropriate hardware, had the
  appropriate operating system installed, and had successfully installed the appropriate version of Java. 
 
@@ -18,4 +17,4 @@ morea_morris_chart_caption: |
    * Almost all students complied with requirements. Those who didn't had inappropriate hardware.
 ---
 
-{%  include assessment-morris-chart.html  %}
+{%  include assessment-chartjs.html  %}

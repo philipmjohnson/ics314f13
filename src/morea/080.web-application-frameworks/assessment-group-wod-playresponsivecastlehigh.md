@@ -9,14 +9,10 @@ morea_outcomes_assessed:
  - outcome-write-code-efficiently 
  - outcome-twitter-bootstrap
  - outcome-play
-morea_morris_chart_data: |
 
-  [{ y: 'Rx', num: 0 },
-   { y: 'Av', num: 2 },
-   { y: 'Sd', num: 1 },
-   { y: 'DNF', num: 3 }]
-
-morea_morris_chart_caption: |
+morea_chartjs_data: "[0, 2, 1, 3]"
+morea_chartjs_labels: '["Rx", "Av", "Sd", "DNF"]'
+morea_chartjs_caption: |
 
   Students worked in groups in-class to create a Play application implementing a responsive version of a
   Castle High web page. 
@@ -29,6 +25,6 @@ morea_morris_chart_caption: |
 
 ---
 
-{%  include assessment-morris-chart-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
+{%  include assessment-chartjs-wod.html Rx="< 40 min" Av="40-50 min" Sd="50-60 min" DNF="60+ min or incorrect"  %}
 
 
