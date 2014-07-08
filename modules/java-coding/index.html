@@ -312,21 +312,20 @@ improved your skill at this task since your last essay. </p>
       
     </p>
     
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-java-coding-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-java-coding-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
   <div class="col-sm-6">
-    <p>This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Java Coding practice WODs.</p>
+    
+<p>This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Java Coding practice WODs.</p>
 
 <p>Discussion:</p>
 
@@ -341,19 +340,28 @@ improved your skill at this task since your last essay. </p>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-java-coding-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Satisfactory', num: 20 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 20, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-java-coding-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -371,22 +379,20 @@ Morris.Bar({
       
     </p>
     
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-charfrequency" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-charfrequency"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 10 min</span>
         <span style="padding: 2px" class="label label-info">Av: 10-15 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 15-25 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 25+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 25+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -403,20 +409,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-charfrequency',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 3 },
- { y: 'Av', num: 4 },
- { y: 'Sd', num: 5 },
- { y: 'DNF', num: 10 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [3, 4, 5, 10] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-charfrequency").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -445,7 +455,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-06-02 15:36:10 -1000</span></p>
+       Last update on: <span>2014-07-08 13:21:21 -1000</span></p>
     <p style="margin: 0">
       19 modules
       

@@ -329,16 +329,14 @@ improved your skill at this task since your last essay. </p>
       
     </p>
     
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-professional-portfolio" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-professional-portfolio"></canvas>
+      </div>
      </div>
   </div>
 
@@ -356,21 +354,28 @@ that satisfied the guidelines in the <a href="/morea/020.professional-persona/re
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-professional-portfolio',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Excellent', num: 2},
- { y: 'Satisfactory', num: 20 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [2, 20, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-professional-portfolio").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 
 
@@ -392,16 +397,14 @@ Morris.Bar({
       
     </p>
     
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-professional-networks" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-professional-networks"></canvas>
+      </div>
      </div>
   </div>
 
@@ -418,20 +421,28 @@ networks and set up appropriate profiles. </p>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-professional-networks',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Satisfactory', num: 22 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 22, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-professional-networks").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 
 </div>
@@ -457,7 +468,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-06-02 15:36:10 -1000</span></p>
+       Last update on: <span>2014-07-08 13:21:21 -1000</span></p>
     <p style="margin: 0">
       19 modules
       

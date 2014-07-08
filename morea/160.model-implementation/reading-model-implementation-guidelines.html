@@ -68,7 +68,7 @@
 
 <p>In the application.conf file, you’ll want code similar to the following to enable EBean, MySQL, and evolutions:</p>
 
-<div class="highlight"><pre><code class="bash"><span class="c"># Database configuration</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># Database configuration</span>
 <span class="c"># ~~~~~</span>
 db.default.driver<span class="o">=</span>com.mysql.jdbc.Driver
 db.default.url<span class="o">=</span><span class="s2">&quot;jdbc:&quot;</span><span class="k">${</span><span class="nv">DATABASE_URL_DB</span><span class="k">}</span>
@@ -120,7 +120,7 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>Consider the following code:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
  
   <span class="nd">@ManyToOne</span>
   <span class="kd">private</span> <span class="n">Warehouse</span> <span class="n">warehouse</span><span class="o">;</span>
@@ -153,7 +153,7 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>So, for example, if there is a StockItem class that declares that many instances of it map to one instance of a Warehouse:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
  
   <span class="nd">@ManyToOne</span>
   <span class="kd">private</span> <span class="n">Warehouse</span> <span class="n">warehouse</span><span class="o">;</span>
@@ -162,7 +162,7 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>Then the Warehouse class should have a field that declares that one instance of it maps to many instances of StockItem:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Warehouse</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Warehouse</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
  
   <span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;warehouse&quot;</span><span class="o">)</span>
   <span class="kd">private</span> <span class="n">List</span> <span class="n">stockItems</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
@@ -181,7 +181,7 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>To make an @ManyToOne relationship truly bidirectional, you have to not only annotate a field in the other entity with @OneToMany, you also have to tell the ORM explicitly that the other entity is going to manage the relationship. You do this by adding the “mappedBy” parameter to the @OneToMany annotation, specifying the field in the other entity that will hold the relationship. For example:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">StockItem</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
  
   <span class="nd">@ManyToOne</span>
   <span class="kd">private</span> <span class="n">Warehouse</span> <span class="n">warehouse</span><span class="o">;</span>
@@ -201,7 +201,7 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>The exact same situation exists with bidirectional OneToOne relationships. In this case, one of the entities should have the mappedBy parameter to indicate that the other entity is the owner, but either entity can be chosen. Here is an example:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Warehouse</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Warehouse</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
  
   <span class="nd">@OneToOne</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;warehouse&quot;</span><span class="o">)</span>
   <span class="kd">private</span> <span class="n">Address</span> <span class="n">address</span><span class="o">;</span>
@@ -218,7 +218,7 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>Bidirectional ManyToMany relationships are just like bidirectional OneToOne relationships: you have to provide the mappedBy parameter to specify an owner. Here’s an example:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Product</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Product</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
  
   <span class="nd">@ManyToMany</span>
   <span class="kd">private</span> <span class="n">List</span> <span class="n">tags</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
@@ -235,7 +235,7 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>The <a href="http://openjpa.apache.org/builds/latest/docs/docbook/manual/jpa_overview_meta_field.html#jpa_overview_meta_cascade">OpenJPA documentation</a> recommends “liberal application” of the parameter “cascade=CascadeType.PERSIST” in relationship annotations. This tells the ORM to implicitly save out entities by following links. For example:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Product</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Product</span> <span class="kd">extends</span> <span class="n">Model</span> <span class="o">{</span>
   <span class="o">:</span>
   <span class="nd">@OneToMany</span><span class="o">(</span><span class="n">mappedBy</span><span class="o">=</span><span class="s">&quot;product&quot;</span><span class="o">,</span> <span class="n">cascade</span><span class="o">=</span><span class="n">CascadeType</span><span class="o">.</span><span class="na">PERSIST</span><span class="o">)</span>
   <span class="kd">public</span> <span class="n">List</span> <span class="n">stockItems</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
@@ -250,13 +250,13 @@ check your DataBinder's configuration (bean property versus direct field access)
 
 <p>Provide all Entity classes with a static find() method that returns a new instance of an EBean Finder() instance.   It will look something like this, assuming the Entity class is named Foo:</p>
 
-<div class="highlight"><pre><code class="java"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Finder</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">,</span> <span class="n">Foo</span><span class="o">&gt;</span> <span class="n">find</span><span class="o">()</span> <span class="o">{</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="n">Finder</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">,</span> <span class="n">Foo</span><span class="o">&gt;</span> <span class="nf">find</span><span class="o">()</span> <span class="o">{</span>
   <span class="k">return</span> <span class="k">new</span> <span class="n">Finder</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">,</span> <span class="n">Foo</span><span class="o">&gt;(</span><span class="n">Long</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">Foo</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 <span class="o">}</span></code></pre></div>
 
 <p>Now you can do queries using this find() method.  Here are some examples:</p>
 
-<div class="highlight"><pre><code class="java"><span class="c1">// Get all Foos in DB.</span>
+<div class="highlight"><pre><code class="language-java" data-lang="java"><span class="c1">// Get all Foos in DB.</span>
 <span class="n">List</span> <span class="n">foos</span> <span class="o">=</span> <span class="n">Foo</span><span class="o">.</span><span class="na">find</span><span class="o">().</span><span class="na">findList</span><span class="o">();</span>
 
 <span class="c1">// Get the Foo with PK=1</span>
@@ -285,7 +285,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-06-02 15:36:10 -1000</span></p>
+       Last update on: <span>2014-07-08 13:21:21 -1000</span></p>
     <p style="margin: 0">
       19 modules
       

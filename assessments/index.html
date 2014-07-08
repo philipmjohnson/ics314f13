@@ -79,16 +79,14 @@
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-environment-configuration" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-environment-configuration"></canvas>
+      </div>
      </div>
   </div>
 
@@ -104,19 +102,28 @@ appropriate operating system installed, and had successfully installed the appro
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-environment-configuration',
-  hideHover: 'auto',
-  data: [{ y: 'Satisfactory', num: 22 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 22, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-environment-configuration").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -134,16 +141,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-discussion-posting" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-discussion-posting"></canvas>
+      </div>
      </div>
   </div>
 
@@ -159,19 +164,28 @@ how to post an introductory message about themselves. </p>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-discussion-posting',
-  hideHover: 'auto',
-  data: [{ y: 'Satisfactory', num: 26 },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 26, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-discussion-posting").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -199,16 +213,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-professional-portfolio" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-professional-portfolio"></canvas>
+      </div>
      </div>
   </div>
 
@@ -226,21 +238,28 @@ that satisfied the guidelines in the <a href="/morea/020.professional-persona/re
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-professional-portfolio',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Excellent', num: 2},
- { y: 'Satisfactory', num: 20 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [2, 20, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-professional-portfolio").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 
 
@@ -262,16 +281,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-professional-networks" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-professional-networks"></canvas>
+      </div>
      </div>
   </div>
 
@@ -288,20 +305,28 @@ networks and set up appropriate profiles. </p>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-professional-networks',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Satisfactory', num: 22 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 22, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-professional-networks").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 
 </div>
@@ -330,16 +355,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-fizzbuzz-in-eclipse" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-fizzbuzz-in-eclipse"></canvas>
+      </div>
      </div>
   </div>
 
@@ -358,21 +381,28 @@ using the Eclipse IDE and write up their experiences in an appropriate manner.</
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-fizzbuzz-in-eclipse',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Excellent', num: 2 },
- { y: 'Satisfactory', num: 18 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [2, 18, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-fizzbuzz-in-eclipse").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -400,16 +430,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-find-violations" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-find-violations"></canvas>
+      </div>
      </div>
   </div>
 
@@ -426,19 +454,28 @@ their knowledge of EJS by playing.</li>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-find-violations',
-  hideHover: 'auto',
-  data: [{ y: 'Satisfactory', num: 24 },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 24, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-find-violations").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -466,21 +503,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-java-coding-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-java-coding-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
   <div class="col-sm-6">
-    <p>This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Java Coding practice WODs.</p>
+    
+<p>This assessment evaluated the ability of students to write a high quality technical essay summarizing their experiences doing the Java Coding practice WODs.</p>
 
 <p>Discussion:</p>
 
@@ -495,19 +531,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-java-coding-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Satisfactory', num: 20 },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 20, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-java-coding-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -525,22 +570,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-charfrequency" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-charfrequency"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 10 min</span>
         <span style="padding: 2px" class="label label-info">Av: 10-15 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 15-25 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 25+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 25+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -557,20 +600,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-charfrequency',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 3 },
- { y: 'Av', num: 4 },
- { y: 'Sd', num: 5 },
- { y: 'DNF', num: 10 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [3, 4, 5, 10] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-charfrequency").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -600,22 +647,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-history-of-surfing" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-history-of-surfing"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
         <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -632,20 +677,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-history-of-surfing',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 3 },
- { y: 'Sd', num: 2 },
- { y: 'DNF', num: 1 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 3, 2, 1] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-history-of-surfing").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -666,16 +715,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-ui-basics-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-ui-basics-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -701,20 +748,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-ui-basics-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 3 },
- { y: 'Satisfactory', num: 16  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [3, 16, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-ui-basics-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -734,22 +789,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-browserhistory4" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-browserhistory4"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 10 min</span>
         <span style="padding: 2px" class="label label-info">Av: 10-15 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 15-20 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 20+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 20+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -771,20 +824,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-browserhistory4',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 1 },
- { y: 'Av', num: 7 },
- { y: 'Sd', num: 1 },
- { y: 'DNF', num: 9 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [1, 7, 1, 9] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-browserhistory4").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -815,22 +872,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-color-blocked" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-color-blocked"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
         <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -848,20 +903,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-color-blocked',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 3 },
- { y: 'Sd', num: 4 },
- { y: 'DNF', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 3, 4, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-color-blocked").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -882,16 +941,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-ui-frameworks-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-ui-frameworks-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -908,20 +965,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-ui-frameworks-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 2 },
- { y: 'Satisfactory', num: 13  },
- { y: 'Unsatisfactory', num: 2 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [2, 13, 2] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-ui-frameworks-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -963,22 +1028,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-playresponsivecastlehigh" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-playresponsivecastlehigh"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -998,20 +1061,24 @@ much time on it yet. </li>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-playresponsivecastlehigh',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 2 },
- { y: 'Sd', num: 1 },
- { y: 'DNF', num: 3 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 2, 1, 3] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-playresponsivecastlehigh").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1032,16 +1099,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-web-application-frameworks-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-web-application-frameworks-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -1057,20 +1122,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-web-application-frameworks-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 2 },
- { y: 'Satisfactory', num: 11  },
- { y: 'Unsatisfactory', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [2, 11, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-web-application-frameworks-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -1094,22 +1167,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-multipagekamanu" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-multipagekamanu"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
         <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 30-40 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 40+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 40+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1126,20 +1197,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-multipagekamanu',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 5 },
- { y: 'Av', num: 7 },
- { y: 'Sd', num: 4 },
- { y: 'DNF', num: 3 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [5, 7, 4, 3] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-multipagekamanu").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1172,22 +1247,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-surferpedia-monday" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-surferpedia-monday"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1206,20 +1279,24 @@ one of their Surferpedia systems.</p>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-surferpedia-monday',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 1 },
- { y: 'Av', num: 2 },
- { y: 'Sd', num: 3 },
- { y: 'DNF', num: 30 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [1, 2, 3, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-surferpedia-monday").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1240,16 +1317,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-cloud-based-hosting-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-cloud-based-hosting-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -1265,20 +1340,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-cloud-based-hosting-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 4 },
- { y: 'Satisfactory', num: 13  },
- { y: 'Unsatisfactory', num: 2 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [4, 13, 2] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-cloud-based-hosting-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -1302,22 +1385,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-paired-wod-surferpedia" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-paired-wod-surferpedia"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
         <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 30-40 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 40+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 40+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1334,20 +1415,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-paired-wod-surferpedia',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 2 },
- { y: 'Av', num: 10 },
- { y: 'Sd', num: 4 },
- { y: 'DNF', num: 3 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [2, 10, 4, 3] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-paired-wod-surferpedia").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1382,22 +1467,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-digitsaddress" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-digitsaddress"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1416,20 +1499,24 @@ augment one of their Digits applications with additional functionality.</p>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-digitsaddress',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 3 },
- { y: 'Sd', num: 3 },
- { y: 'DNF', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 3, 3, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-digitsaddress").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1450,16 +1537,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-dynamic-web-applications-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-dynamic-web-applications-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -1474,20 +1559,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-dynamic-web-applications-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 4 },
- { y: 'Satisfactory', num: 15  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [4, 15, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-dynamic-web-applications-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -1513,22 +1606,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-digitsdelete" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-digitsdelete"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 10 min</span>
         <span style="padding: 2px" class="label label-info">Av: 10-20 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 20-30 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 30+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 30+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1545,20 +1636,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-digitsdelete',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 5 },
- { y: 'Av', num: 7 },
- { y: 'Sd', num: 0 },
- { y: 'DNF', num: 2 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [5, 7, 0, 2] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-digitsdelete").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1597,22 +1692,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-digitsradio" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-digitsradio"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1630,20 +1723,24 @@ augment one of their Digits applications with additional functionality.</p>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-digitsradio',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 2 },
- { y: 'Sd', num: 4 },
- { y: 'DNF', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 2, 4, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-digitsradio").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1664,16 +1761,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-dynamic-web-applications-2-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-dynamic-web-applications-2-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -1688,20 +1783,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-dynamic-web-applications-2-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 3 },
- { y: 'Satisfactory', num: 12  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [3, 12, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-dynamic-web-applications-2-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -1727,22 +1830,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-digitshidden" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-digitshidden"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 7 min</span>
         <span style="padding: 2px" class="label label-info">Av: 7-14 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 14-21 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 21+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 21+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1759,20 +1860,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-digitshidden',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 4 },
- { y: 'Av', num: 7 },
- { y: 'Sd', num: 3 },
- { y: 'DNF', num: 1 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [4, 7, 3, 1] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-digitshidden").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1815,22 +1920,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-surferpediaupdates" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-surferpediaupdates"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1849,20 +1952,24 @@ and deploy the results to CloudBees</p>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-surferpediaupdates',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 2 },
- { y: 'Sd', num: 2 },
- { y: 'DNF', num: 2 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 2, 2, 2] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-surferpediaupdates").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -1883,16 +1990,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-cloud-based-deployment-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-cloud-based-deployment-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -1908,20 +2013,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-cloud-based-deployment-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 2 },
- { y: 'Satisfactory', num: 7  },
- { y: 'Unsatisfactory', num: 5 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [2, 7, 5] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-cloud-based-deployment-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -1949,22 +2062,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-surferpedia-foot-style" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-surferpedia-foot-style"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 30 min</span>
         <span style="padding: 2px" class="label label-info">Av: 30-45 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 45-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -1982,20 +2093,24 @@ regular or goofy foot style and deploy the results to CloudBees. About 8 files a
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-surferpedia-foot-style',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 2 },
- { y: 'Av', num: 9 },
- { y: 'Sd', num: 2 },
- { y: 'DNF', num: 2 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [2, 9, 2, 2] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-surferpedia-foot-style").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -2038,16 +2153,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-startup-weekend" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-startup-weekend"></canvas>
+      </div>
      </div>
   </div>
 
@@ -2065,20 +2178,28 @@ organizers said this was the most ICS students who ever participated in a Startu
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-startup-weekend',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Partipants', num: 8},
- { y: 'Non-participants', num: 8 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Participants", "Non-participants"],
+      datasets: [ { data: [8, 8] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-startup-weekend").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 
 
@@ -2118,22 +2239,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-digitsregistration" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-digitsregistration"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -2151,20 +2270,24 @@ their Digits applications.</p>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-digitsregistration',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 1 },
- { y: 'Av', num: 3 },
- { y: 'Sd', num: 1 },
- { y: 'DNF', num: 1 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [1, 3, 1, 1] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-digitsregistration").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -2185,16 +2308,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-authentication-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-authentication-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -2210,19 +2331,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-authentication-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Satisfactory', num: 15  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [0, 15, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-authentication-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -2248,22 +2378,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-surferpedialogin" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-surferpedialogin"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 30 min</span>
         <span style="padding: 2px" class="label label-info">Av: 30-45 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 45-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -2280,20 +2408,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-surferpedialogin',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 3 },
- { y: 'Av', num: 5 },
- { y: 'Sd', num: 3 },
- { y: 'DNF', num: 4 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [3, 5, 3, 4] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-surferpedialogin").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -2322,22 +2454,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-textbookmania" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-textbookmania"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -2355,20 +2485,24 @@ develop an ER diagram using LucidCharts for the TextBookMania application.</p>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-textbookmania',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 4 },
- { y: 'Sd', num: 2 },
- { y: 'DNF', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 4, 2, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-textbookmania").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -2389,16 +2523,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-model-design-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-model-design-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -2414,20 +2546,28 @@ presented in this course. </li>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-model-design-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 4 },
- { y: 'Satisfactory', num: 12  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [4, 12, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-model-design-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -2445,22 +2585,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-play-example-form" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-play-example-form"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
         <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -2478,20 +2616,24 @@ to create an ER diagram for the play-example-form application and upload it to a
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-play-example-form',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 1 },
- { y: 'Av', num: 5 },
- { y: 'Sd', num: 9 },
- { y: 'DNF', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [1, 5, 9, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-play-example-form").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -2530,22 +2672,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-play-example-login-mysql" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-play-example-login-mysql"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 60 min</span>
         <span style="padding: 2px" class="label label-info">Av: &lt; 60 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: &lt; 60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -2565,18 +2705,24 @@ to complete this WOD.</li>
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-play-example-login-mysql',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 3},
- { y: 'DNF', num: 3 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "DNF"],
+      datasets: [ { data: [3, 3] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-play-example-login-mysql").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -2597,16 +2743,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-model-implementation-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-model-implementation-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -2622,20 +2766,28 @@ presented in this course. </li>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-model-implementation-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 2 },
- { y: 'Satisfactory', num: 13  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [2, 13, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-model-implementation-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -2675,22 +2827,20 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-testing" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-testing"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 40 min</span>
         <span style="padding: 2px" class="label label-info">Av: 40-50 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 50-60 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 60+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -2708,20 +2858,24 @@ for a Surferpedia system, implement and commit the test, and close the issue.</p
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-testing',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 2 },
- { y: 'Sd', num: 4 },
- { y: 'DNF', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 2, 4, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-testing").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -2742,16 +2896,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-testing-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-testing-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -2768,20 +2920,28 @@ this essay.</li>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-testing-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 1 },
- { y: 'Satisfactory', num: 10  },
- { y: 'Unsatisfactory', num: 3 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [1, 10, 3] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-testing-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -2835,16 +2995,14 @@ Morris.Bar({
           
         </p>
       
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-final-exam" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-final-exam"></canvas>
+      </div>
      </div>
   </div>
 
@@ -2862,20 +3020,28 @@ successfully.</p>
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-final-exam',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 5  },
- { y: 'Satisfactory', num: 10  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [5, 10, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-final-exam").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -2896,7 +3062,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-06-02 15:36:10 -1000</span></p>
+       Last update on: <span>2014-07-08 13:21:21 -1000</span></p>
     <p style="margin: 0">
       19 modules
       

@@ -241,22 +241,20 @@
       
     </p>
     
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-group-wod-history-of-surfing" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-group-wod-history-of-surfing"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 20 min</span>
         <span style="padding: 2px" class="label label-info">Av: 20-30 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 30-45 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 45+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -273,20 +271,24 @@
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-group-wod-history-of-surfing',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 0 },
- { y: 'Av', num: 3 },
- { y: 'Sd', num: 2 },
- { y: 'DNF', num: 1 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [0, 3, 2, 1] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-group-wod-history-of-surfing").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -307,16 +309,14 @@ Morris.Bar({
       
     </p>
     
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-ui-basics-technical-essay" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-ui-basics-technical-essay"></canvas>
+      </div>
      </div>
   </div>
 
@@ -342,20 +342,28 @@ Morris.Bar({
 
   </div>
 
-<script>
-Morris.Bar({
-  element: 'assessment-ui-basics-technical-essay',
-  hideHover: 'auto',
-  data: [{ y: 'Excellent', num: 3 },
- { y: 'Satisfactory', num: 16  },
- { y: 'Unsatisfactory', num: 0 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
-</script>
+  <script>
+
+    var moreaChartData = {
+      labels: ["Excellent", "Satisfactory", "Unsatisfactory"],
+      datasets: [ { data: [3, 16, 0] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-ui-basics-technical-essay").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
+  </script>
+
+
 
 </div>
 
@@ -375,22 +383,20 @@ Morris.Bar({
       
     </p>
     
-      <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css" />
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+      <script src="/ics314f13/js/Chart.js"></script>
 
 <div class="row">
   <div class="col-sm-6">
     <div class="well">
-      <div id="assessment-wod-browserhistory4" style="height: 150px;"></div>
+      <div style="margin-right: auto; margin-left: auto">
+        <canvas id="assessment-wod-browserhistory4"></canvas>
+      </div>
       <span class="h4">
         <span style="padding: 2px" class="label label-success">Rx: &lt; 10 min</span>
         <span style="padding: 2px" class="label label-info">Av: 10-15 min</span>
         <span style="padding: 2px" class="label label-warning">Sd: 15-20 min</span>
-      <span style="padding: 2px" class="label label-danger">DNF: 20+ min or incorrect</span>
-</span>
+        <span style="padding: 2px" class="label label-danger">DNF: 20+ min or incorrect</span>
+      </span>
     </div>
   </div>
 
@@ -412,20 +418,24 @@ Morris.Bar({
   </div>
 
 <script>
-Morris.Bar({
-  element: 'assessment-wod-browserhistory4',
-  hideHover: 'auto',
-  data: 
-[{ y: 'Rx', num: 1 },
- { y: 'Av', num: 7 },
- { y: 'Sd', num: 1 },
- { y: 'DNF', num: 9 }]
-,
-  xkey: 'y',
-  ykeys: ['num'],
-  resize: true,
-  labels: ['Students']
-});
+
+    var moreaChartData = {
+      labels: ["Rx", "Av", "Sd", "DNF"],
+      datasets: [ { data: [1, 7, 1, 9] } ]
+    };
+
+    var moreaChartOptions = {
+      scaleGridLineColor: "gray",
+      scaleFontColor: "darkgray",
+      scaleLineColor: "darkgray",
+      responsive: true,
+      animation: false
+    };
+
+    // Get the context of the canvas element we want to select
+    var ctx = document.getElementById("assessment-wod-browserhistory4").getContext("2d");
+    var myNewChart = new Chart(ctx).Bar(moreaChartData, moreaChartOptions);
+
 </script>
 
 
@@ -453,7 +463,7 @@ johnson@hawaii.edu<br /></p>
 
     
     <p style="margin: 0">Powered by the <a href="http://morea-framework.github.io/">Morea Framework</a> (Theme: superhero)<br>
-       Last update on: <span>2014-06-02 15:36:10 -1000</span></p>
+       Last update on: <span>2014-07-08 13:21:21 -1000</span></p>
     <p style="margin: 0">
       19 modules
       
