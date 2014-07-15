@@ -46,7 +46,7 @@ intensive](https://www.hawaii.edu/gened/focus/w.htm) course.
 ## Pedagogy
 
 ICS 314 consists of a sequence of [modules](modules),
-each typically taking a week to complete. Each module has the following
+each typically taking a week to complete. Most modules have the following
 structure:
 
   * One or more [learning outcomes](outcomes), describing the major goals for the module.
