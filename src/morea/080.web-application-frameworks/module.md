@@ -29,7 +29,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-playresponsivecastlehigh
  - assessment-web-application-frameworks-technical-essay
- - assessment-wod-multipagekamanu
+# - assessment-wod-multipagekamanu
 morea_type: module
 morea_icon_url: /morea/080.web-application-frameworks/logo.jpg
 morea_labels:

@@ -27,7 +27,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-digitsradio
  - assessment-dynamic-web-applications-2-technical-essay
- - assessment-wod-digitshidden
+# - assessment-wod-digitshidden
 morea_type: module
 morea_icon_url: /morea/100.dynamic-web-applications/logo.jpg
 morea_labels:

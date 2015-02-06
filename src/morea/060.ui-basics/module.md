@@ -16,7 +16,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-history-of-surfing
  - assessment-ui-basics-technical-essay
- - assessment-wod-browserhistory4
+# - assessment-wod-browserhistory4
 morea_type: module
 morea_icon_url: /morea/060.ui-basics/logo.jpg
 morea_labels:

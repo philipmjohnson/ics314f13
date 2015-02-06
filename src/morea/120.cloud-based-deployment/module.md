@@ -17,7 +17,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-surferpediaupdates
  - assessment-cloud-based-deployment-technical-essay
- - assessment-wod-surferpedia-foot-style
+# - assessment-wod-surferpedia-foot-style
 morea_type: module
 morea_icon_url: /morea/120.cloud-based-deployment/logo.jpg
 morea_labels:

@@ -31,7 +31,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-surferpedia-monday
  - assessment-cloud-based-hosting-technical-essay
- - assessment-paired-wod-surferpedia
+# - assessment-paired-wod-surferpedia
 morea_type: module
 morea_icon_url: /morea/090.cloud-based-hosting/logo.jpg
 morea_labels:

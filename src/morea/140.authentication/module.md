@@ -21,7 +21,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-digitsregistration
  - assessment-authentication-technical-essay
- - assessment-wod-surferpedialogin
+# - assessment-wod-surferpedialogin
 morea_type: module
 morea_icon_url: /morea/140.authentication/logo.jpg
 morea_labels:

@@ -32,7 +32,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-digitsaddress
  - assessment-dynamic-web-applications-technical-essay
- - assessment-wod-digitsdelete
+# - assessment-wod-digitsdelete
 morea_type: module
 morea_icon_url: /morea/100.dynamic-web-applications/logo.jpg
 morea_labels:

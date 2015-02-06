@@ -26,7 +26,7 @@ morea_experiences:
 morea_assessments:
  - assessment-group-wod-color-blocked
  - assessment-ui-frameworks-technical-essay
- - assessment-wod-responsivehokulani
+# - assessment-wod-responsivehokulani
 morea_type: module
 morea_icon_url: /morea/070.ui-frameworks/logo.png
 morea_labels:
