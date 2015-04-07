@@ -5,11 +5,15 @@ title: Schedule
 
 <!-- Load FullCalendar for schedule page. -->
 <!-- Documentation available at: http://arshaw.com/fullcalendar/docs/google_calendar/ -->
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.css">
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/fullcalendar.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/1.6.4/gcal.js"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/fullcalendar.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.2/gcal.js"></script>
 <div style="margin-bottom: 10px" class="container">
   <h1>Schedule</h1>
+
+  <p>The schedule for this course is managed using the public Google Calendar displayed on this page. You can subscribe to this calendar using its <a href="https://www.google.com/calendar/ical/ovc7gbat5jfpb6kg0a14ur12qg%40group.calendar.google.com/public/basic.ics">iCal address</a>.</p>
+
   <div id='calendar'></div>
 </div>
 <script>
@@ -18,10 +22,12 @@ title: Schedule
     // page is now ready, initialize the calendar...
 
     $('#calendar').fullCalendar({
-      events: 'https://www.google.com/calendar/feeds/m7nms0v3ud99ucgtn8lopo79sk%40group.calendar.google.com/public/basic'
-    })
+      googleCalendarApiKey: 'AIzaSyBTwmlnN3BzIterDVli-CyHBxqV8gjWj3U',
+      events: {
+        googleCalendarId: 'm7nms0v3ud99ucgtn8lopo79sk@group.calendar.google.com'
+      }
+    });
 
-    $('#calendar').fullCalendar('gotoDate', 2013, 8, 1)
-
+    $('#calendar').fullCalendar('gotoDate', '2013-08-01');
   });
 </script>
