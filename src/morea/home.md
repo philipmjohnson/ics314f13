@@ -40,7 +40,7 @@ and value writing as a tools for learning, and to learn to write in an
 appropriate manner for software engineering. You will do a substantial amount
 of writing for this course, well over 16 pages or 4,000 words, and you must
 adequately complete all writing assignments in order to pass the course with a
-grade of D or better. For these reasons, ICS 314 is designated as a [writing
+grade of D or better. Your writing will take the form of weekly technical essays as well as a professional portfolio that you will incrementally construct over the course of the semester.  I will provide feedback and assessment of your writing through individual emails as well as through summary postings to the class mailing list that indicate common problems and solutions.  In some cases, you will be required to revise and resubmit your writing. For these reasons, ICS 314 is designated as a [writing
 intensive](https://www.hawaii.edu/gened/focus/w.htm) course.
 
 ## Pedagogy
